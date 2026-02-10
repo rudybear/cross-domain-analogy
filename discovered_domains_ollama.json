@@ -1,0 +1,1099 @@
+{
+  "domains": [
+    {
+      "name": "Astronomical Objects",
+      "description": "Auto-discovered domain with 6 concepts",
+      "entities": [
+        "nebula",
+        "black_hole",
+        "supernova",
+        "asteroid",
+        "comet",
+        "quasar"
+      ],
+      "relations": [
+        {
+          "subject": "nebula",
+          "predicate": "prevents",
+          "object": "supernova"
+        },
+        {
+          "subject": "supernova",
+          "predicate": "transforms",
+          "object": "nebula"
+        },
+        {
+          "subject": "quasar",
+          "predicate": "causes",
+          "object": "supernova"
+        },
+        {
+          "subject": "nebula",
+          "predicate": "transforms",
+          "object": "quasar"
+        },
+        {
+          "subject": "supernova",
+          "predicate": "transforms",
+          "object": "quasar"
+        },
+        {
+          "subject": "quasar",
+          "predicate": "produces",
+          "object": "black_hole"
+        },
+        {
+          "subject": "quasar",
+          "predicate": "causes",
+          "object": "nebula"
+        },
+        {
+          "subject": "supernova",
+          "predicate": "produces",
+          "object": "black_hole"
+        },
+        {
+          "subject": "black_hole",
+          "predicate": "transforms",
+          "object": "supernova"
+        },
+        {
+          "subject": "black_hole",
+          "predicate": "transforms",
+          "object": "quasar"
+        },
+        {
+          "subject": "asteroid",
+          "predicate": "transforms",
+          "object": "quasar"
+        },
+        {
+          "subject": "nebula",
+          "predicate": "depends_on",
+          "object": "black_hole"
+        },
+        {
+          "subject": "asteroid",
+          "predicate": "produces",
+          "object": "black_hole"
+        },
+        {
+          "subject": "comet",
+          "predicate": "requires",
+          "object": "asteroid"
+        },
+        {
+          "subject": "quasar",
+          "predicate": "destroys",
+          "object": "asteroid"
+        }
+      ]
+    },
+    {
+      "name": "Information Technology",
+      "description": "Auto-discovered domain with 3 concepts",
+      "entities": [
+        "CPU",
+        "API",
+        "GDP"
+      ],
+      "relations": [
+        {
+          "subject": "CPU",
+          "predicate": "enables",
+          "object": "API"
+        },
+        {
+          "subject": "API",
+          "predicate": "enables",
+          "object": "CPU"
+        },
+        {
+          "subject": "API",
+          "predicate": "causes",
+          "object": "GDP"
+        },
+        {
+          "subject": "GDP",
+          "predicate": "enables",
+          "object": "API"
+        },
+        {
+          "subject": "CPU",
+          "predicate": "causes",
+          "object": "GDP"
+        },
+        {
+          "subject": "GDP",
+          "predicate": "enables",
+          "object": "CPU"
+        }
+      ]
+    },
+    {
+      "name": "Automotive Mechanics",
+      "description": "Auto-discovered domain with 6 concepts",
+      "entities": [
+        "wheel",
+        "brake",
+        "torque",
+        "piston",
+        "gear",
+        "axle"
+      ],
+      "relations": [
+        {
+          "subject": "axle",
+          "predicate": "transforms",
+          "object": "wheel"
+        },
+        {
+          "subject": "wheel",
+          "predicate": "enables",
+          "object": "axle"
+        },
+        {
+          "subject": "gear",
+          "predicate": "transforms",
+          "object": "wheel"
+        },
+        {
+          "subject": "piston",
+          "predicate": "transforms",
+          "object": "axle"
+        },
+        {
+          "subject": "gear",
+          "predicate": "transforms",
+          "object": "axle"
+        },
+        {
+          "subject": "wheel",
+          "predicate": "destroys",
+          "object": "gear"
+        },
+        {
+          "subject": "axle",
+          "predicate": "enables",
+          "object": "piston"
+        },
+        {
+          "subject": "axle",
+          "predicate": "causes",
+          "object": "torque"
+        },
+        {
+          "subject": "torque",
+          "predicate": "transforms",
+          "object": "axle"
+        },
+        {
+          "subject": "brake",
+          "predicate": "transforms",
+          "object": "torque"
+        },
+        {
+          "subject": "brake",
+          "predicate": "transforms",
+          "object": "axle"
+        },
+        {
+          "subject": "piston",
+          "predicate": "transforms",
+          "object": "wheel"
+        },
+        {
+          "subject": "axle",
+          "predicate": "destroys",
+          "object": "gear"
+        },
+        {
+          "subject": "piston",
+          "predicate": "transforms",
+          "object": "torque"
+        },
+        {
+          "subject": "gear",
+          "predicate": "causes",
+          "object": "torque"
+        }
+      ]
+    },
+    {
+      "name": "Music Theory",
+      "description": "Auto-discovered domain with 5 concepts",
+      "entities": [
+        "melody",
+        "harmony",
+        "rhythm",
+        "star",
+        "galaxy"
+      ],
+      "relations": [
+        {
+          "subject": "timbre",
+          "predicate": "destroys",
+          "object": "syncopation"
+        },
+        {
+          "subject": "crescendo",
+          "predicate": "destroys",
+          "object": "syncopation"
+        },
+        {
+          "subject": "syncopation",
+          "predicate": "causes",
+          "object": "timbre"
+        },
+        {
+          "subject": "syncopation",
+          "predicate": "supports",
+          "object": "crescendo"
+        },
+        {
+          "subject": "tempo",
+          "predicate": "destroys",
+          "object": "crescendo"
+        },
+        {
+          "subject": "crescendo",
+          "predicate": "causes",
+          "object": "timbre"
+        },
+        {
+          "subject": "timbre",
+          "predicate": "transforms",
+          "object": "octave"
+        },
+        {
+          "subject": "crescendo",
+          "predicate": "transforms",
+          "object": "octave"
+        },
+        {
+          "subject": "timbre",
+          "predicate": "supports",
+          "object": "crescendo"
+        },
+        {
+          "subject": "tempo",
+          "predicate": "enables",
+          "object": "octave"
+        },
+        {
+          "subject": "octave",
+          "predicate": "causes",
+          "object": "timbre"
+        },
+        {
+          "subject": "crescendo",
+          "predicate": "transforms",
+          "object": "tempo"
+        },
+        {
+          "subject": "syncopation",
+          "predicate": "transforms",
+          "object": "octave"
+        },
+        {
+          "subject": "chord",
+          "predicate": "transforms",
+          "object": "octave"
+        },
+        {
+          "subject": "tempo",
+          "predicate": "destroys",
+          "object": "syncopation"
+        }
+      ]
+    },
+    {
+      "name": "Physical and Biological Sciences",
+      "description": "Auto-discovered domain with 37 concepts",
+      "entities": [
+        "combustion",
+        "friction",
+        "glucose",
+        "metabolism",
+        "algorithm",
+        "bandwidth",
+        "demand",
+        "molecule",
+        "reaction",
+        "catalyst",
+        "oxidation",
+        "acid",
+        "isotope",
+        "ecosystem",
+        "prey",
+        "photosynthesis",
+        "decomposer",
+        "symbiosis",
+        "adaptation",
+        "pitch",
+        "resonance",
+        "column",
+        "ventilation",
+        "cognition",
+        "emotion",
+        "perception",
+        "motivation",
+        "anxiety",
+        "behavior",
+        "conditioning",
+        "attention",
+        "consciousness",
+        "empathy",
+        "gravity",
+        "statute",
+        "precedent",
+        "verdict"
+      ],
+      "relations": [
+        {
+          "subject": "perception",
+          "predicate": "destroys",
+          "object": "cognition"
+        },
+        {
+          "subject": "cognition",
+          "predicate": "causes",
+          "object": "perception"
+        },
+        {
+          "subject": "perception",
+          "predicate": "transforms",
+          "object": "behavior"
+        },
+        {
+          "subject": "perception",
+          "predicate": "destroys",
+          "object": "adaptation"
+        },
+        {
+          "subject": "cognition",
+          "predicate": "destroys",
+          "object": "adaptation"
+        },
+        {
+          "subject": "cognition",
+          "predicate": "transforms",
+          "object": "behavior"
+        },
+        {
+          "subject": "adaptation",
+          "predicate": "produces",
+          "object": "conditioning"
+        },
+        {
+          "subject": "conditioning",
+          "predicate": "destroys",
+          "object": "adaptation"
+        },
+        {
+          "subject": "consciousness",
+          "predicate": "destroys",
+          "object": "cognition"
+        },
+        {
+          "subject": "adaptation",
+          "predicate": "causes",
+          "object": "cognition"
+        },
+        {
+          "subject": "metabolism",
+          "predicate": "destroys",
+          "object": "cognition"
+        },
+        {
+          "subject": "behavior",
+          "predicate": "destroys",
+          "object": "adaptation"
+        },
+        {
+          "subject": "consciousness",
+          "predicate": "causes",
+          "object": "perception"
+        },
+        {
+          "subject": "adaptation",
+          "predicate": "transforms",
+          "object": "behavior"
+        },
+        {
+          "subject": "adaptation",
+          "predicate": "causes",
+          "object": "perception"
+        }
+      ]
+    },
+    {
+      "name": "Cellular Biology",
+      "description": "Auto-discovered domain with 9 concepts",
+      "entities": [
+        "mitochondria",
+        "enzyme",
+        "membrane",
+        "DNA",
+        "protein",
+        "antibody",
+        "solvent",
+        "polymer",
+        "emulsion"
+      ],
+      "relations": [
+        {
+          "subject": "antibody",
+          "predicate": "transforms",
+          "object": "enzyme"
+        },
+        {
+          "subject": "antibody",
+          "predicate": "transforms",
+          "object": "protein"
+        },
+        {
+          "subject": "enzyme",
+          "predicate": "transforms",
+          "object": "protein"
+        },
+        {
+          "subject": "protein",
+          "predicate": "produces",
+          "object": "enzyme"
+        },
+        {
+          "subject": "enzyme",
+          "predicate": "causes",
+          "object": "antibody"
+        },
+        {
+          "subject": "protein",
+          "predicate": "destroys",
+          "object": "antibody"
+        },
+        {
+          "subject": "enzyme",
+          "predicate": "produces",
+          "object": "membrane"
+        },
+        {
+          "subject": "solvent",
+          "predicate": "produces",
+          "object": "membrane"
+        },
+        {
+          "subject": "protein",
+          "predicate": "produces",
+          "object": "membrane"
+        },
+        {
+          "subject": "polymer",
+          "predicate": "transforms",
+          "object": "protein"
+        },
+        {
+          "subject": "membrane",
+          "predicate": "transforms",
+          "object": "enzyme"
+        },
+        {
+          "subject": "membrane",
+          "predicate": "transforms",
+          "object": "protein"
+        },
+        {
+          "subject": "mitochondria",
+          "predicate": "produces",
+          "object": "membrane"
+        },
+        {
+          "subject": "polymer",
+          "predicate": "produces",
+          "object": "membrane"
+        },
+        {
+          "subject": "antibody",
+          "predicate": "produces",
+          "object": "membrane"
+        }
+      ]
+    },
+    {
+      "name": "Culinary Process Techniques",
+      "description": "Auto-discovered domain with 12 concepts",
+      "entities": [
+        "food_chain",
+        "memory_psychology",
+        "fermentation",
+        "caramelization",
+        "seasoning",
+        "simmering",
+        "marination",
+        "broth",
+        "reduction_cooking",
+        "blanching",
+        "braising",
+        "tempering"
+      ],
+      "relations": [
+        {
+          "subject": "caramelization",
+          "predicate": "causes",
+          "object": "fermentation"
+        },
+        {
+          "subject": "marination",
+          "predicate": "requires",
+          "object": "seasoning"
+        },
+        {
+          "subject": "braising",
+          "predicate": "produces",
+          "object": "reduction_cooking"
+        },
+        {
+          "subject": "blanching",
+          "predicate": "causes",
+          "object": "reduction_cooking"
+        },
+        {
+          "subject": "reduction_cooking",
+          "predicate": "causes",
+          "object": "blanching"
+        },
+        {
+          "subject": "braising",
+          "predicate": "regulates",
+          "object": "blanching"
+        },
+        {
+          "subject": "blanching",
+          "predicate": "destroys",
+          "object": "simmering"
+        },
+        {
+          "subject": "marination",
+          "predicate": "produces",
+          "object": "blanching"
+        },
+        {
+          "subject": "marination",
+          "predicate": "produces",
+          "object": "reduction_cooking"
+        },
+        {
+          "subject": "fermentation",
+          "predicate": "causes",
+          "object": "blanching"
+        },
+        {
+          "subject": "reduction_cooking",
+          "predicate": "destroys",
+          "object": "simmering"
+        },
+        {
+          "subject": "caramelization",
+          "predicate": "regulates",
+          "object": "blanching"
+        },
+        {
+          "subject": "tempering",
+          "predicate": "causes",
+          "object": "blanching"
+        },
+        {
+          "subject": "caramelization",
+          "predicate": "depends_on",
+          "object": "reduction_cooking"
+        },
+        {
+          "subject": "fermentation",
+          "predicate": "depends_on",
+          "object": "reduction_cooking"
+        }
+      ]
+    },
+    {
+      "name": "Economics and Law",
+      "description": "Auto-discovered domain with 25 concepts",
+      "entities": [
+        "transmission",
+        "virus",
+        "encryption",
+        "inflation",
+        "market",
+        "trade",
+        "currency",
+        "debt",
+        "supply",
+        "recession",
+        "investment",
+        "tax",
+        "predator",
+        "habitat",
+        "extinction",
+        "biodiversity",
+        "migration",
+        "trauma",
+        "jurisdiction",
+        "liability",
+        "prosecution",
+        "appeal",
+        "arbitration",
+        "injunction",
+        "compliance"
+      ],
+      "relations": [
+        {
+          "subject": "prosecution",
+          "predicate": "enables",
+          "object": "migration"
+        },
+        {
+          "subject": "investment",
+          "predicate": "enables",
+          "object": "migration"
+        },
+        {
+          "subject": "compliance",
+          "predicate": "destroys",
+          "object": "migration"
+        },
+        {
+          "subject": "encryption",
+          "predicate": "destroys",
+          "object": "migration"
+        },
+        {
+          "subject": "habitat",
+          "predicate": "destroys",
+          "object": "migration"
+        },
+        {
+          "subject": "transmission",
+          "predicate": "destroys",
+          "object": "migration"
+        },
+        {
+          "subject": "biodiversity",
+          "predicate": "enables",
+          "object": "migration"
+        },
+        {
+          "subject": "extinction",
+          "predicate": "enables",
+          "object": "migration"
+        },
+        {
+          "subject": "liability",
+          "predicate": "destroys",
+          "object": "migration"
+        },
+        {
+          "subject": "jurisdiction",
+          "predicate": "enables",
+          "object": "migration"
+        },
+        {
+          "subject": "appeal",
+          "predicate": "enables",
+          "object": "migration"
+        },
+        {
+          "subject": "prosecution",
+          "predicate": "destroys",
+          "object": "appeal"
+        },
+        {
+          "subject": "arbitration",
+          "predicate": "transforms",
+          "object": "migration"
+        },
+        {
+          "subject": "inflation",
+          "predicate": "enables",
+          "object": "migration"
+        },
+        {
+          "subject": "recession",
+          "predicate": "requires",
+          "object": "migration"
+        }
+      ]
+    },
+    {
+      "name": "Music Theory",
+      "description": "Auto-discovered domain with 7 concepts",
+      "entities": [
+        "chord",
+        "tempo",
+        "octave",
+        "timbre",
+        "crescendo",
+        "syncopation",
+        "dough"
+      ],
+      "relations": [
+        {
+          "subject": "timbre",
+          "predicate": "destroys",
+          "object": "syncopation"
+        },
+        {
+          "subject": "crescendo",
+          "predicate": "destroys",
+          "object": "syncopation"
+        },
+        {
+          "subject": "syncopation",
+          "predicate": "causes",
+          "object": "timbre"
+        },
+        {
+          "subject": "syncopation",
+          "predicate": "supports",
+          "object": "crescendo"
+        },
+        {
+          "subject": "tempo",
+          "predicate": "destroys",
+          "object": "crescendo"
+        },
+        {
+          "subject": "crescendo",
+          "predicate": "causes",
+          "object": "timbre"
+        },
+        {
+          "subject": "timbre",
+          "predicate": "transforms",
+          "object": "octave"
+        },
+        {
+          "subject": "crescendo",
+          "predicate": "transforms",
+          "object": "octave"
+        },
+        {
+          "subject": "timbre",
+          "predicate": "supports",
+          "object": "crescendo"
+        },
+        {
+          "subject": "tempo",
+          "predicate": "enables",
+          "object": "octave"
+        },
+        {
+          "subject": "octave",
+          "predicate": "causes",
+          "object": "timbre"
+        },
+        {
+          "subject": "crescendo",
+          "predicate": "transforms",
+          "object": "tempo"
+        },
+        {
+          "subject": "syncopation",
+          "predicate": "transforms",
+          "object": "octave"
+        },
+        {
+          "subject": "chord",
+          "predicate": "transforms",
+          "object": "octave"
+        },
+        {
+          "subject": "tempo",
+          "predicate": "destroys",
+          "object": "syncopation"
+        }
+      ]
+    },
+    {
+      "name": "Building Materials",
+      "description": "Auto-discovered domain with 10 concepts",
+      "entities": [
+        "exhaust",
+        "monopoly",
+        "bond",
+        "crystal",
+        "foundation",
+        "concrete",
+        "steel",
+        "facade",
+        "insulation",
+        "truss"
+      ],
+      "relations": [
+        {
+          "subject": "facade",
+          "predicate": "supports",
+          "object": "foundation"
+        },
+        {
+          "subject": "insulation",
+          "predicate": "supports",
+          "object": "foundation"
+        },
+        {
+          "subject": "concrete",
+          "predicate": "supports",
+          "object": "foundation"
+        },
+        {
+          "subject": "foundation",
+          "predicate": "transforms",
+          "object": "facade"
+        },
+        {
+          "subject": "bond",
+          "predicate": "supports",
+          "object": "foundation"
+        },
+        {
+          "subject": "steel",
+          "predicate": "supports",
+          "object": "foundation"
+        },
+        {
+          "subject": "insulation",
+          "predicate": "transforms",
+          "object": "facade"
+        },
+        {
+          "subject": "crystal",
+          "predicate": "supports",
+          "object": "foundation"
+        },
+        {
+          "subject": "concrete",
+          "predicate": "transforms",
+          "object": "facade"
+        },
+        {
+          "subject": "truss",
+          "predicate": "supports",
+          "object": "foundation"
+        },
+        {
+          "subject": "exhaust",
+          "predicate": "supports",
+          "object": "foundation"
+        },
+        {
+          "subject": "foundation",
+          "predicate": "destroys",
+          "object": "insulation"
+        },
+        {
+          "subject": "truss",
+          "predicate": "transforms",
+          "object": "facade"
+        },
+        {
+          "subject": "facade",
+          "predicate": "prevents",
+          "object": "insulation"
+        },
+        {
+          "subject": "concrete",
+          "predicate": "destroys",
+          "object": "steel"
+        }
+      ]
+    },
+    {
+      "name": "Astronomy and Physics",
+      "description": "Auto-discovered domain with 9 concepts",
+      "entities": [
+        "cell",
+        "neuron",
+        "organ",
+        "atom",
+        "electron",
+        "planet",
+        "orbit",
+        "pulsar",
+        "tort"
+      ],
+      "relations": [
+        {
+          "subject": "planet",
+          "predicate": "destroys",
+          "object": "orbit"
+        },
+        {
+          "subject": "neuron",
+          "predicate": "transforms",
+          "object": "orbit"
+        },
+        {
+          "subject": "atom",
+          "predicate": "destroys",
+          "object": "orbit"
+        },
+        {
+          "subject": "pulsar",
+          "predicate": "destroys",
+          "object": "orbit"
+        },
+        {
+          "subject": "cell",
+          "predicate": "destroys",
+          "object": "neuron"
+        },
+        {
+          "subject": "cell",
+          "predicate": "transforms",
+          "object": "orbit"
+        },
+        {
+          "subject": "atom",
+          "predicate": "destroys",
+          "object": "neuron"
+        },
+        {
+          "subject": "neuron",
+          "predicate": "destroys",
+          "object": "cell"
+        },
+        {
+          "subject": "tort",
+          "predicate": "transforms",
+          "object": "orbit"
+        },
+        {
+          "subject": "electron",
+          "predicate": "transforms",
+          "object": "orbit"
+        },
+        {
+          "subject": "pulsar",
+          "predicate": "destroys",
+          "object": "neuron"
+        },
+        {
+          "subject": "electron",
+          "predicate": "destroys",
+          "object": "neuron"
+        },
+        {
+          "subject": "organ",
+          "predicate": "transforms",
+          "object": "orbit"
+        },
+        {
+          "subject": "neuron",
+          "predicate": "transforms",
+          "object": "pulsar"
+        },
+        {
+          "subject": "orbit",
+          "predicate": "regulates",
+          "object": "neuron"
+        }
+      ]
+    },
+    {
+      "name": "Computer Science Fundamentals",
+      "description": "Auto-discovered domain with 15 concepts",
+      "entities": [
+        "engine",
+        "fuel",
+        "memory",
+        "database",
+        "network",
+        "compiler",
+        "thread",
+        "cache",
+        "server",
+        "scale",
+        "beam",
+        "arch",
+        "blueprint",
+        "load",
+        "contract"
+      ],
+      "relations": [
+        {
+          "subject": "beam",
+          "predicate": "transforms",
+          "object": "scale"
+        },
+        {
+          "subject": "blueprint",
+          "predicate": "transforms",
+          "object": "scale"
+        },
+        {
+          "subject": "fuel",
+          "predicate": "transforms",
+          "object": "scale"
+        },
+        {
+          "subject": "network",
+          "predicate": "transforms",
+          "object": "scale"
+        },
+        {
+          "subject": "engine",
+          "predicate": "transforms",
+          "object": "scale"
+        },
+        {
+          "subject": "thread",
+          "predicate": "transforms",
+          "object": "scale"
+        },
+        {
+          "subject": "memory",
+          "predicate": "transforms",
+          "object": "scale"
+        },
+        {
+          "subject": "cache",
+          "predicate": "transforms",
+          "object": "scale"
+        },
+        {
+          "subject": "blueprint",
+          "predicate": "transforms",
+          "object": "network"
+        },
+        {
+          "subject": "server",
+          "predicate": "transforms",
+          "object": "scale"
+        },
+        {
+          "subject": "server",
+          "predicate": "transforms",
+          "object": "network"
+        },
+        {
+          "subject": "database",
+          "predicate": "transforms",
+          "object": "scale"
+        },
+        {
+          "subject": "network",
+          "predicate": "causes",
+          "object": "blueprint"
+        },
+        {
+          "subject": "memory",
+          "predicate": "transforms",
+          "object": "network"
+        },
+        {
+          "subject": "fuel",
+          "predicate": "transforms",
+          "object": "beam"
+        }
+      ]
+    }
+  ]
+}

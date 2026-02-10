@@ -1,0 +1,64 @@
+{
+  "domains": [
+    {
+      "name": "Immune System",
+      "description": "How biological immune defense works",
+      "entities": [
+        "pathogen", "white_blood_cell", "antibody", "antigen",
+        "inflammation", "fever", "memory_cell", "vaccine",
+        "infection", "immunity", "autoimmune_response"
+      ],
+      "relations": [
+        {"subject": "pathogen", "predicate": "triggers", "object": "inflammation"},
+        {"subject": "white_blood_cell", "predicate": "detects", "object": "antigen"},
+        {"subject": "white_blood_cell", "predicate": "produces", "object": "antibody"},
+        {"subject": "antibody", "predicate": "neutralizes", "object": "pathogen"},
+        {"subject": "infection", "predicate": "triggers", "object": "fever"},
+        {"subject": "fever", "predicate": "enhances", "object": "white_blood_cell"},
+        {"subject": "memory_cell", "predicate": "stores", "object": "immunity"},
+        {"subject": "vaccine", "predicate": "trains", "object": "memory_cell"},
+        {"subject": "autoimmune_response", "predicate": "attacks", "object": "cell"}
+      ]
+    },
+    {
+      "name": "Cybersecurity",
+      "description": "How digital security defense works",
+      "entities": [
+        "malware", "firewall", "signature", "threat_indicator",
+        "alert", "incident_response", "threat_database", "patch",
+        "breach", "protection", "false_positive"
+      ],
+      "relations": [
+        {"subject": "malware", "predicate": "triggers", "object": "alert"},
+        {"subject": "firewall", "predicate": "detects", "object": "threat_indicator"},
+        {"subject": "firewall", "predicate": "produces", "object": "signature"},
+        {"subject": "signature", "predicate": "neutralizes", "object": "malware"},
+        {"subject": "breach", "predicate": "triggers", "object": "incident_response"},
+        {"subject": "incident_response", "predicate": "enhances", "object": "firewall"},
+        {"subject": "threat_database", "predicate": "stores", "object": "protection"},
+        {"subject": "patch", "predicate": "trains", "object": "threat_database"},
+        {"subject": "false_positive", "predicate": "attacks", "object": "application"}
+      ]
+    },
+    {
+      "name": "Urban Planning",
+      "description": "How cities handle threats and maintain stability",
+      "entities": [
+        "crime", "police", "law", "suspicious_activity",
+        "emergency", "crisis_response", "legal_precedent", "policy",
+        "disaster", "safety", "overpolicing"
+      ],
+      "relations": [
+        {"subject": "crime", "predicate": "triggers", "object": "emergency"},
+        {"subject": "police", "predicate": "detects", "object": "suspicious_activity"},
+        {"subject": "police", "predicate": "produces", "object": "law"},
+        {"subject": "law", "predicate": "neutralizes", "object": "crime"},
+        {"subject": "disaster", "predicate": "triggers", "object": "crisis_response"},
+        {"subject": "crisis_response", "predicate": "enhances", "object": "police"},
+        {"subject": "legal_precedent", "predicate": "stores", "object": "safety"},
+        {"subject": "policy", "predicate": "trains", "object": "legal_precedent"},
+        {"subject": "overpolicing", "predicate": "attacks", "object": "community"}
+      ]
+    }
+  ]
+}

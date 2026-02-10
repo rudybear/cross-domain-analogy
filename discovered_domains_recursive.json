@@ -1,0 +1,2077 @@
+{
+  "domains": [
+    {
+      "name": "Chemical Bonding",
+      "description": "Auto-discovered domain with 1 concepts",
+      "entities": [
+        "bond"
+      ],
+      "relations": []
+    },
+    {
+      "name": "Economics",
+      "description": "Auto-discovered domain with 3 concepts",
+      "entities": [
+        "market",
+        "supply",
+        "demand"
+      ],
+      "relations": [
+        {
+          "subject": "demand",
+          "predicate": "produces",
+          "object": "supply"
+        },
+        {
+          "subject": "market",
+          "predicate": "requires",
+          "object": "demand"
+        },
+        {
+          "subject": "demand",
+          "predicate": "competes_with",
+          "object": "market"
+        },
+        {
+          "subject": "market",
+          "predicate": "produces",
+          "object": "supply"
+        },
+        {
+          "subject": "supply",
+          "predicate": "requires",
+          "object": "demand"
+        },
+        {
+          "subject": "supply",
+          "predicate": "competes_with",
+          "object": "market"
+        }
+      ]
+    },
+    {
+      "name": "Computer Programming Languages",
+      "description": "Auto-discovered domain with 2 concepts",
+      "entities": [
+        "compiler",
+        "octave"
+      ],
+      "relations": [
+        {
+          "subject": "octave",
+          "predicate": "creates",
+          "object": "compiler"
+        },
+        {
+          "subject": "compiler",
+          "predicate": "transforms",
+          "object": "octave"
+        }
+      ]
+    },
+    {
+      "name": "Ecological Systems",
+      "description": "Auto-discovered domain with 2 concepts",
+      "entities": [
+        "food_chain",
+        "foundation"
+      ],
+      "relations": [
+        {
+          "subject": "food_chain",
+          "predicate": "supports",
+          "object": "foundation"
+        },
+        {
+          "subject": "foundation",
+          "predicate": "regulates",
+          "object": "food_chain"
+        }
+      ]
+    },
+    {
+      "name": "Music Theory",
+      "description": "Auto-discovered domain with 3 concepts",
+      "entities": [
+        "rhythm",
+        "tempo",
+        "pitch"
+      ],
+      "relations": [
+        {
+          "subject": "chord",
+          "predicate": "contains",
+          "object": "melody"
+        },
+        {
+          "subject": "resonance",
+          "predicate": "contains",
+          "object": "melody"
+        },
+        {
+          "subject": "melody",
+          "predicate": "destroys",
+          "object": "resonance"
+        },
+        {
+          "subject": "melody",
+          "predicate": "competes_with",
+          "object": "chord"
+        },
+        {
+          "subject": "crystal",
+          "predicate": "contains",
+          "object": "melody"
+        },
+        {
+          "subject": "chord",
+          "predicate": "destroys",
+          "object": "resonance"
+        },
+        {
+          "subject": "crystal",
+          "predicate": "destroys",
+          "object": "resonance"
+        },
+        {
+          "subject": "melody",
+          "predicate": "competes_with",
+          "object": "crystal"
+        },
+        {
+          "subject": "chord",
+          "predicate": "causes",
+          "object": "virus"
+        },
+        {
+          "subject": "resonance",
+          "predicate": "creates",
+          "object": "chord"
+        },
+        {
+          "subject": "melody",
+          "predicate": "causes",
+          "object": "virus"
+        },
+        {
+          "subject": "resonance",
+          "predicate": "contains",
+          "object": "crystal"
+        },
+        {
+          "subject": "database",
+          "predicate": "causes",
+          "object": "virus"
+        },
+        {
+          "subject": "crystal",
+          "predicate": "causes",
+          "object": "virus"
+        },
+        {
+          "subject": "database",
+          "predicate": "contains",
+          "object": "crystal"
+        }
+      ]
+    },
+    {
+      "name": "Cosmic Astronomy",
+      "description": "Auto-discovered domain with 5 concepts",
+      "entities": [
+        "star",
+        "nebula",
+        "galaxy",
+        "supernova",
+        "quasar"
+      ],
+      "relations": [
+        {
+          "subject": "supernova",
+          "predicate": "competes_with",
+          "object": "galaxy"
+        },
+        {
+          "subject": "nebula",
+          "predicate": "competes_with",
+          "object": "galaxy"
+        },
+        {
+          "subject": "supernova",
+          "predicate": "competes_with",
+          "object": "star"
+        },
+        {
+          "subject": "nebula",
+          "predicate": "produces",
+          "object": "supernova"
+        },
+        {
+          "subject": "quasar",
+          "predicate": "competes_with",
+          "object": "galaxy"
+        },
+        {
+          "subject": "galaxy",
+          "predicate": "destroys",
+          "object": "star"
+        },
+        {
+          "subject": "star",
+          "predicate": "competes_with",
+          "object": "galaxy"
+        },
+        {
+          "subject": "supernova",
+          "predicate": "destroys",
+          "object": "nebula"
+        },
+        {
+          "subject": "galaxy",
+          "predicate": "destroys",
+          "object": "supernova"
+        },
+        {
+          "subject": "nebula",
+          "predicate": "competes_with",
+          "object": "star"
+        },
+        {
+          "subject": "quasar",
+          "predicate": "destroys",
+          "object": "supernova"
+        },
+        {
+          "subject": "galaxy",
+          "predicate": "destroys",
+          "object": "nebula"
+        },
+        {
+          "subject": "star",
+          "predicate": "destroys",
+          "object": "supernova"
+        },
+        {
+          "subject": "supernova",
+          "predicate": "competes_with",
+          "object": "quasar"
+        },
+        {
+          "subject": "galaxy",
+          "predicate": "creates",
+          "object": "quasar"
+        }
+      ]
+    },
+    {
+      "name": "International Migration",
+      "description": "Auto-discovered domain with 2 concepts",
+      "entities": [
+        "trade",
+        "migration"
+      ],
+      "relations": [
+        {
+          "subject": "trade",
+          "predicate": "transforms",
+          "object": "migration"
+        },
+        {
+          "subject": "migration",
+          "predicate": "competes_with",
+          "object": "trade"
+        }
+      ]
+    },
+    {
+      "name": "Legal Justice System",
+      "description": "Auto-discovered domain with 3 concepts",
+      "entities": [
+        "trauma",
+        "verdict",
+        "appeal"
+      ],
+      "relations": [
+        {
+          "subject": "appeal",
+          "predicate": "depends_on",
+          "object": "verdict"
+        },
+        {
+          "subject": "verdict",
+          "predicate": "competes_with",
+          "object": "appeal"
+        },
+        {
+          "subject": "verdict",
+          "predicate": "causes",
+          "object": "trauma"
+        },
+        {
+          "subject": "appeal",
+          "predicate": "destroys",
+          "object": "trauma"
+        },
+        {
+          "subject": "trauma",
+          "predicate": "depends_on",
+          "object": "verdict"
+        },
+        {
+          "subject": "trauma",
+          "predicate": "competes_with",
+          "object": "appeal"
+        }
+      ]
+    },
+    {
+      "name": "Building Envelope Systems",
+      "description": "Auto-discovered domain with 3 concepts",
+      "entities": [
+        "concrete",
+        "insulation",
+        "ventilation"
+      ],
+      "relations": [
+        {
+          "subject": "insulation",
+          "predicate": "regulates",
+          "object": "ventilation"
+        },
+        {
+          "subject": "ventilation",
+          "predicate": "prevents",
+          "object": "insulation"
+        },
+        {
+          "subject": "insulation",
+          "predicate": "supports",
+          "object": "concrete"
+        },
+        {
+          "subject": "concrete",
+          "predicate": "prevents",
+          "object": "insulation"
+        },
+        {
+          "subject": "ventilation",
+          "predicate": "supports",
+          "object": "concrete"
+        },
+        {
+          "subject": "concrete",
+          "predicate": "regulates",
+          "object": "ventilation"
+        }
+      ]
+    },
+    {
+      "name": "Law of Evidence",
+      "description": "Auto-discovered domain with 5 concepts",
+      "entities": [
+        "statute",
+        "precedent",
+        "jurisdiction",
+        "liability",
+        "prosecution"
+      ],
+      "relations": [
+        {
+          "subject": "liability",
+          "predicate": "causes",
+          "object": "prosecution"
+        },
+        {
+          "subject": "jurisdiction",
+          "predicate": "causes",
+          "object": "prosecution"
+        },
+        {
+          "subject": "prosecution",
+          "predicate": "requires",
+          "object": "statute"
+        },
+        {
+          "subject": "statute",
+          "predicate": "causes",
+          "object": "prosecution"
+        },
+        {
+          "subject": "prosecution",
+          "predicate": "regulates",
+          "object": "jurisdiction"
+        },
+        {
+          "subject": "jurisdiction",
+          "predicate": "requires",
+          "object": "statute"
+        },
+        {
+          "subject": "prosecution",
+          "predicate": "prevents",
+          "object": "liability"
+        },
+        {
+          "subject": "statute",
+          "predicate": "regulates",
+          "object": "jurisdiction"
+        },
+        {
+          "subject": "precedent",
+          "predicate": "regulates",
+          "object": "jurisdiction"
+        },
+        {
+          "subject": "precedent",
+          "predicate": "causes",
+          "object": "prosecution"
+        },
+        {
+          "subject": "liability",
+          "predicate": "requires",
+          "object": "statute"
+        },
+        {
+          "subject": "liability",
+          "predicate": "regulates",
+          "object": "jurisdiction"
+        },
+        {
+          "subject": "jurisdiction",
+          "predicate": "prevents",
+          "object": "precedent"
+        },
+        {
+          "subject": "precedent",
+          "predicate": "requires",
+          "object": "statute"
+        },
+        {
+          "subject": "prosecution",
+          "predicate": "prevents",
+          "object": "precedent"
+        }
+      ]
+    },
+    {
+      "name": "Computer Networking Security",
+      "description": "Auto-discovered domain with 3 concepts",
+      "entities": [
+        "network",
+        "bandwidth",
+        "encryption"
+      ],
+      "relations": [
+        {
+          "subject": "bandwidth",
+          "predicate": "competes_with",
+          "object": "network"
+        },
+        {
+          "subject": "network",
+          "predicate": "enables",
+          "object": "bandwidth"
+        },
+        {
+          "subject": "encryption",
+          "predicate": "competes_with",
+          "object": "network"
+        },
+        {
+          "subject": "network",
+          "predicate": "prevents",
+          "object": "encryption"
+        },
+        {
+          "subject": "bandwidth",
+          "predicate": "prevents",
+          "object": "encryption"
+        },
+        {
+          "subject": "encryption",
+          "predicate": "enables",
+          "object": "bandwidth"
+        }
+      ]
+    },
+    {
+      "name": "Cognitive Neuroscience",
+      "description": "Auto-discovered domain with 7 concepts",
+      "entities": [
+        "neuron",
+        "memory",
+        "cognition",
+        "memory_psychology",
+        "perception",
+        "attention",
+        "consciousness"
+      ],
+      "relations": [
+        {
+          "subject": "memory_psychology",
+          "predicate": "requires",
+          "object": "memory"
+        },
+        {
+          "subject": "memory_psychology",
+          "predicate": "enables",
+          "object": "cognition"
+        },
+        {
+          "subject": "perception",
+          "predicate": "interacts_with",
+          "object": "cognition"
+        },
+        {
+          "subject": "cognition",
+          "predicate": "transforms",
+          "object": "perception"
+        },
+        {
+          "subject": "memory",
+          "predicate": "causes",
+          "object": "memory_psychology"
+        },
+        {
+          "subject": "cognition",
+          "predicate": "creates",
+          "object": "consciousness"
+        },
+        {
+          "subject": "perception",
+          "predicate": "creates",
+          "object": "consciousness"
+        },
+        {
+          "subject": "consciousness",
+          "predicate": "transforms",
+          "object": "perception"
+        },
+        {
+          "subject": "consciousness",
+          "predicate": "interacts_with",
+          "object": "cognition"
+        },
+        {
+          "subject": "neuron",
+          "predicate": "enables",
+          "object": "consciousness"
+        },
+        {
+          "subject": "cognition",
+          "predicate": "causes",
+          "object": "memory_psychology"
+        },
+        {
+          "subject": "neuron",
+          "predicate": "interacts_with",
+          "object": "cognition"
+        },
+        {
+          "subject": "memory",
+          "predicate": "interacts_with",
+          "object": "attention"
+        },
+        {
+          "subject": "attention",
+          "predicate": "creates",
+          "object": "memory"
+        },
+        {
+          "subject": "memory",
+          "predicate": "interacts_with",
+          "object": "cognition"
+        }
+      ]
+    },
+    {
+      "name": "Astronomical Phenomena",
+      "description": "Auto-discovered domain with 3 concepts",
+      "entities": [
+        "crescendo",
+        "arch",
+        "pulsar"
+      ],
+      "relations": [
+        {
+          "subject": "crescendo",
+          "predicate": "supports",
+          "object": "arch"
+        },
+        {
+          "subject": "arch",
+          "predicate": "destroys",
+          "object": "crescendo"
+        },
+        {
+          "subject": "pulsar",
+          "predicate": "supports",
+          "object": "arch"
+        },
+        {
+          "subject": "pulsar",
+          "predicate": "destroys",
+          "object": "crescendo"
+        },
+        {
+          "subject": "arch",
+          "predicate": "destroys",
+          "object": "pulsar"
+        },
+        {
+          "subject": "crescendo",
+          "predicate": "supports",
+          "object": "pulsar"
+        }
+      ]
+    },
+    {
+      "name": "Colloid Science",
+      "description": "Auto-discovered domain with 5 concepts",
+      "entities": [
+        "membrane",
+        "acid",
+        "solvent",
+        "polymer",
+        "emulsion"
+      ],
+      "relations": [
+        {
+          "subject": "polymer",
+          "predicate": "contains",
+          "object": "solvent"
+        },
+        {
+          "subject": "solvent",
+          "predicate": "supports",
+          "object": "polymer"
+        },
+        {
+          "subject": "emulsion",
+          "predicate": "contains",
+          "object": "solvent"
+        },
+        {
+          "subject": "membrane",
+          "predicate": "produces",
+          "object": "acid"
+        },
+        {
+          "subject": "solvent",
+          "predicate": "produces",
+          "object": "acid"
+        },
+        {
+          "subject": "emulsion",
+          "predicate": "produces",
+          "object": "acid"
+        },
+        {
+          "subject": "emulsion",
+          "predicate": "regulates",
+          "object": "membrane"
+        },
+        {
+          "subject": "solvent",
+          "predicate": "competes_with",
+          "object": "emulsion"
+        },
+        {
+          "subject": "acid",
+          "predicate": "regulates",
+          "object": "membrane"
+        },
+        {
+          "subject": "polymer",
+          "predicate": "produces",
+          "object": "acid"
+        },
+        {
+          "subject": "solvent",
+          "predicate": "regulates",
+          "object": "membrane"
+        },
+        {
+          "subject": "polymer",
+          "predicate": "regulates",
+          "object": "membrane"
+        },
+        {
+          "subject": "acid",
+          "predicate": "contains",
+          "object": "solvent"
+        },
+        {
+          "subject": "membrane",
+          "predicate": "contains",
+          "object": "solvent"
+        },
+        {
+          "subject": "membrane",
+          "predicate": "contains",
+          "object": "emulsion"
+        }
+      ]
+    },
+    {
+      "name": "Biology of Cells",
+      "description": "Auto-discovered domain with 4 concepts",
+      "entities": [
+        "cell",
+        "mitochondria",
+        "DNA",
+        "organ"
+      ],
+      "relations": [
+        {
+          "subject": "organ",
+          "predicate": "competes_with",
+          "object": "cell"
+        },
+        {
+          "subject": "mitochondria",
+          "predicate": "competes_with",
+          "object": "cell"
+        },
+        {
+          "subject": "cell",
+          "predicate": "regulates",
+          "object": "organ"
+        },
+        {
+          "subject": "DNA",
+          "predicate": "competes_with",
+          "object": "cell"
+        },
+        {
+          "subject": "DNA",
+          "predicate": "regulates",
+          "object": "organ"
+        },
+        {
+          "subject": "cell",
+          "predicate": "contains",
+          "object": "DNA"
+        },
+        {
+          "subject": "organ",
+          "predicate": "contains",
+          "object": "DNA"
+        },
+        {
+          "subject": "mitochondria",
+          "predicate": "regulates",
+          "object": "organ"
+        },
+        {
+          "subject": "mitochondria",
+          "predicate": "contains",
+          "object": "DNA"
+        },
+        {
+          "subject": "cell",
+          "predicate": "produces",
+          "object": "mitochondria"
+        },
+        {
+          "subject": "DNA",
+          "predicate": "produces",
+          "object": "mitochondria"
+        }
+      ]
+    },
+    {
+      "name": "Biochemical Processes",
+      "description": "Auto-discovered domain with 5 concepts",
+      "entities": [
+        "glucose",
+        "enzyme",
+        "protein",
+        "metabolism",
+        "antibody"
+      ],
+      "relations": [
+        {
+          "subject": "protein",
+          "predicate": "produces",
+          "object": "enzyme"
+        },
+        {
+          "subject": "enzyme",
+          "predicate": "supports",
+          "object": "protein"
+        },
+        {
+          "subject": "glucose",
+          "predicate": "destroys",
+          "object": "metabolism"
+        },
+        {
+          "subject": "antibody",
+          "predicate": "produces",
+          "object": "enzyme"
+        },
+        {
+          "subject": "glucose",
+          "predicate": "produces",
+          "object": "enzyme"
+        },
+        {
+          "subject": "metabolism",
+          "predicate": "produces",
+          "object": "glucose"
+        },
+        {
+          "subject": "antibody",
+          "predicate": "supports",
+          "object": "protein"
+        },
+        {
+          "subject": "enzyme",
+          "predicate": "produces",
+          "object": "glucose"
+        },
+        {
+          "subject": "glucose",
+          "predicate": "competes_with",
+          "object": "protein"
+        },
+        {
+          "subject": "enzyme",
+          "predicate": "competes_with",
+          "object": "antibody"
+        },
+        {
+          "subject": "metabolism",
+          "predicate": "produces",
+          "object": "enzyme"
+        },
+        {
+          "subject": "protein",
+          "predicate": "competes_with",
+          "object": "antibody"
+        },
+        {
+          "subject": "enzyme",
+          "predicate": "destroys",
+          "object": "metabolism"
+        },
+        {
+          "subject": "protein",
+          "predicate": "produces",
+          "object": "glucose"
+        },
+        {
+          "subject": "metabolism",
+          "predicate": "contains",
+          "object": "protein"
+        }
+      ]
+    },
+    {
+      "name": "Psychological Motivation Theory",
+      "description": "Auto-discovered domain with 6 concepts",
+      "entities": [
+        "emotion",
+        "motivation",
+        "anxiety",
+        "behavior",
+        "conditioning",
+        "empathy"
+      ],
+      "relations": [
+        {
+          "subject": "empathy",
+          "predicate": "causes",
+          "object": "emotion"
+        },
+        {
+          "subject": "emotion",
+          "predicate": "causes",
+          "object": "anxiety"
+        },
+        {
+          "subject": "motivation",
+          "predicate": "interacts_with",
+          "object": "behavior"
+        },
+        {
+          "subject": "anxiety",
+          "predicate": "destroys",
+          "object": "emotion"
+        },
+        {
+          "subject": "emotion",
+          "predicate": "interacts_with",
+          "object": "empathy"
+        },
+        {
+          "subject": "conditioning",
+          "predicate": "interacts_with",
+          "object": "behavior"
+        },
+        {
+          "subject": "emotion",
+          "predicate": "interacts_with",
+          "object": "behavior"
+        },
+        {
+          "subject": "conditioning",
+          "predicate": "causes",
+          "object": "motivation"
+        },
+        {
+          "subject": "empathy",
+          "predicate": "interacts_with",
+          "object": "behavior"
+        },
+        {
+          "subject": "conditioning",
+          "predicate": "causes",
+          "object": "anxiety"
+        },
+        {
+          "subject": "empathy",
+          "predicate": "causes",
+          "object": "motivation"
+        },
+        {
+          "subject": "emotion",
+          "predicate": "causes",
+          "object": "motivation"
+        },
+        {
+          "subject": "motivation",
+          "predicate": "prevents",
+          "object": "conditioning"
+        },
+        {
+          "subject": "anxiety",
+          "predicate": "prevents",
+          "object": "conditioning"
+        },
+        {
+          "subject": "behavior",
+          "predicate": "causes",
+          "object": "motivation"
+        }
+      ]
+    },
+    {
+      "name": "Automotive Mechanics",
+      "description": "Auto-discovered domain with 7 concepts",
+      "entities": [
+        "wheel",
+        "brake",
+        "transmission",
+        "friction",
+        "torque",
+        "gear",
+        "axle"
+      ],
+      "relations": [
+        {
+          "subject": "wheel",
+          "predicate": "supports",
+          "object": "axle"
+        },
+        {
+          "subject": "axle",
+          "predicate": "produces",
+          "object": "wheel"
+        },
+        {
+          "subject": "wheel",
+          "predicate": "prevents",
+          "object": "brake"
+        },
+        {
+          "subject": "transmission",
+          "predicate": "competes_with",
+          "object": "gear"
+        },
+        {
+          "subject": "gear",
+          "predicate": "transforms",
+          "object": "transmission"
+        },
+        {
+          "subject": "wheel",
+          "predicate": "requires",
+          "object": "gear"
+        },
+        {
+          "subject": "axle",
+          "predicate": "requires",
+          "object": "gear"
+        },
+        {
+          "subject": "torque",
+          "predicate": "requires",
+          "object": "gear"
+        },
+        {
+          "subject": "torque",
+          "predicate": "supports",
+          "object": "axle"
+        },
+        {
+          "subject": "transmission",
+          "predicate": "prevents",
+          "object": "brake"
+        },
+        {
+          "subject": "friction",
+          "predicate": "prevents",
+          "object": "brake"
+        },
+        {
+          "subject": "brake",
+          "predicate": "transforms",
+          "object": "transmission"
+        },
+        {
+          "subject": "axle",
+          "predicate": "transforms",
+          "object": "torque"
+        },
+        {
+          "subject": "friction",
+          "predicate": "transforms",
+          "object": "torque"
+        },
+        {
+          "subject": "brake",
+          "predicate": "produces",
+          "object": "wheel"
+        }
+      ]
+    },
+    {
+      "name": "Internal Combustion",
+      "description": "Auto-discovered domain with 8 concepts",
+      "entities": [
+        "engine",
+        "fuel",
+        "combustion",
+        "exhaust",
+        "piston",
+        "CPU",
+        "catalyst",
+        "steel"
+      ],
+      "relations": [
+        {
+          "subject": "fuel",
+          "predicate": "destroys",
+          "object": "combustion"
+        },
+        {
+          "subject": "combustion",
+          "predicate": "produces",
+          "object": "fuel"
+        },
+        {
+          "subject": "piston",
+          "predicate": "produces",
+          "object": "engine"
+        },
+        {
+          "subject": "exhaust",
+          "predicate": "produces",
+          "object": "engine"
+        },
+        {
+          "subject": "engine",
+          "predicate": "produces",
+          "object": "fuel"
+        },
+        {
+          "subject": "exhaust",
+          "predicate": "destroys",
+          "object": "combustion"
+        },
+        {
+          "subject": "fuel",
+          "predicate": "produces",
+          "object": "engine"
+        },
+        {
+          "subject": "combustion",
+          "predicate": "produces",
+          "object": "engine"
+        },
+        {
+          "subject": "engine",
+          "predicate": "destroys",
+          "object": "combustion"
+        },
+        {
+          "subject": "exhaust",
+          "predicate": "produces",
+          "object": "fuel"
+        },
+        {
+          "subject": "engine",
+          "predicate": "destroys",
+          "object": "exhaust"
+        },
+        {
+          "subject": "CPU",
+          "predicate": "produces",
+          "object": "engine"
+        },
+        {
+          "subject": "catalyst",
+          "predicate": "produces",
+          "object": "fuel"
+        },
+        {
+          "subject": "combustion",
+          "predicate": "destroys",
+          "object": "exhaust"
+        },
+        {
+          "subject": "fuel",
+          "predicate": "destroys",
+          "object": "exhaust"
+        }
+      ]
+    },
+    {
+      "name": "Economics and Finance",
+      "description": "Auto-discovered domain with 7 concepts",
+      "entities": [
+        "inflation",
+        "GDP",
+        "currency",
+        "debt",
+        "recession",
+        "investment",
+        "tax"
+      ],
+      "relations": [
+        {
+          "subject": "currency",
+          "predicate": "causes",
+          "object": "inflation"
+        },
+        {
+          "subject": "inflation",
+          "predicate": "destroys",
+          "object": "currency"
+        },
+        {
+          "subject": "GDP",
+          "predicate": "supports",
+          "object": "currency"
+        },
+        {
+          "subject": "currency",
+          "predicate": "produces",
+          "object": "GDP"
+        },
+        {
+          "subject": "currency",
+          "predicate": "competes_with",
+          "object": "investment"
+        },
+        {
+          "subject": "inflation",
+          "predicate": "causes",
+          "object": "recession"
+        },
+        {
+          "subject": "inflation",
+          "predicate": "competes_with",
+          "object": "investment"
+        },
+        {
+          "subject": "currency",
+          "predicate": "causes",
+          "object": "debt"
+        },
+        {
+          "subject": "investment",
+          "predicate": "supports",
+          "object": "currency"
+        },
+        {
+          "subject": "GDP",
+          "predicate": "causes",
+          "object": "recession"
+        },
+        {
+          "subject": "GDP",
+          "predicate": "causes",
+          "object": "inflation"
+        },
+        {
+          "subject": "tax",
+          "predicate": "competes_with",
+          "object": "investment"
+        },
+        {
+          "subject": "debt",
+          "predicate": "competes_with",
+          "object": "investment"
+        },
+        {
+          "subject": "recession",
+          "predicate": "produces",
+          "object": "inflation"
+        },
+        {
+          "subject": "inflation",
+          "predicate": "causes",
+          "object": "debt"
+        }
+      ]
+    },
+    {
+      "name": "Ecological Systems Theory",
+      "description": "Auto-discovered domain with 8 concepts",
+      "entities": [
+        "ecosystem",
+        "predator",
+        "prey",
+        "habitat",
+        "extinction",
+        "biodiversity",
+        "adaptation",
+        "facade"
+      ],
+      "relations": [
+        {
+          "subject": "predator",
+          "predicate": "competes_with",
+          "object": "prey"
+        },
+        {
+          "subject": "prey",
+          "predicate": "competes_with",
+          "object": "predator"
+        },
+        {
+          "subject": "habitat",
+          "predicate": "regulates",
+          "object": "ecosystem"
+        },
+        {
+          "subject": "biodiversity",
+          "predicate": "regulates",
+          "object": "ecosystem"
+        },
+        {
+          "subject": "biodiversity",
+          "predicate": "destroys",
+          "object": "extinction"
+        },
+        {
+          "subject": "ecosystem",
+          "predicate": "competes_with",
+          "object": "biodiversity"
+        },
+        {
+          "subject": "prey",
+          "predicate": "destroys",
+          "object": "extinction"
+        },
+        {
+          "subject": "ecosystem",
+          "predicate": "destroys",
+          "object": "extinction"
+        },
+        {
+          "subject": "ecosystem",
+          "predicate": "supports",
+          "object": "habitat"
+        },
+        {
+          "subject": "habitat",
+          "predicate": "transforms",
+          "object": "adaptation"
+        },
+        {
+          "subject": "extinction",
+          "predicate": "competes_with",
+          "object": "prey"
+        },
+        {
+          "subject": "habitat",
+          "predicate": "destroys",
+          "object": "extinction"
+        },
+        {
+          "subject": "ecosystem",
+          "predicate": "transforms",
+          "object": "adaptation"
+        },
+        {
+          "subject": "extinction",
+          "predicate": "regulates",
+          "object": "biodiversity"
+        },
+        {
+          "subject": "extinction",
+          "predicate": "regulates",
+          "object": "ecosystem"
+        }
+      ]
+    },
+    {
+      "name": "Chemical Biology",
+      "description": "Auto-discovered domain with 7 concepts",
+      "entities": [
+        "molecule",
+        "atom",
+        "reaction",
+        "electron",
+        "oxidation",
+        "isotope",
+        "photosynthesis"
+      ],
+      "relations": [
+        {
+          "subject": "electron",
+          "predicate": "contains",
+          "object": "atom"
+        },
+        {
+          "subject": "molecule",
+          "predicate": "contains",
+          "object": "atom"
+        },
+        {
+          "subject": "isotope",
+          "predicate": "contains",
+          "object": "atom"
+        },
+        {
+          "subject": "oxidation",
+          "predicate": "produces",
+          "object": "reaction"
+        },
+        {
+          "subject": "atom",
+          "predicate": "transforms",
+          "object": "electron"
+        },
+        {
+          "subject": "atom",
+          "predicate": "produces",
+          "object": "reaction"
+        },
+        {
+          "subject": "atom",
+          "predicate": "regulates",
+          "object": "molecule"
+        },
+        {
+          "subject": "molecule",
+          "predicate": "produces",
+          "object": "reaction"
+        },
+        {
+          "subject": "electron",
+          "predicate": "produces",
+          "object": "reaction"
+        },
+        {
+          "subject": "isotope",
+          "predicate": "produces",
+          "object": "reaction"
+        },
+        {
+          "subject": "atom",
+          "predicate": "contains",
+          "object": "isotope"
+        },
+        {
+          "subject": "photosynthesis",
+          "predicate": "produces",
+          "object": "reaction"
+        },
+        {
+          "subject": "reaction",
+          "predicate": "contains",
+          "object": "atom"
+        },
+        {
+          "subject": "molecule",
+          "predicate": "produces",
+          "object": "photosynthesis"
+        },
+        {
+          "subject": "reaction",
+          "predicate": "destroys",
+          "object": "oxidation"
+        }
+      ]
+    },
+    {
+      "name": "Structural Engineering",
+      "description": "Auto-discovered domain with 4 concepts",
+      "entities": [
+        "harmony",
+        "beam",
+        "truss",
+        "braising"
+      ],
+      "relations": [
+        {
+          "subject": "harmony",
+          "predicate": "supports",
+          "object": "beam"
+        },
+        {
+          "subject": "beam",
+          "predicate": "competes_with",
+          "object": "harmony"
+        },
+        {
+          "subject": "truss",
+          "predicate": "transforms",
+          "object": "beam"
+        },
+        {
+          "subject": "beam",
+          "predicate": "supports",
+          "object": "truss"
+        },
+        {
+          "subject": "braising",
+          "predicate": "interacts_with",
+          "object": "harmony"
+        },
+        {
+          "subject": "braising",
+          "predicate": "supports",
+          "object": "truss"
+        },
+        {
+          "subject": "truss",
+          "predicate": "interacts_with",
+          "object": "harmony"
+        },
+        {
+          "subject": "harmony",
+          "predicate": "supports",
+          "object": "truss"
+        },
+        {
+          "subject": "braising",
+          "predicate": "supports",
+          "object": "beam"
+        },
+        {
+          "subject": "truss",
+          "predicate": "produces",
+          "object": "braising"
+        },
+        {
+          "subject": "harmony",
+          "predicate": "produces",
+          "object": "braising"
+        },
+        {
+          "subject": "beam",
+          "predicate": "produces",
+          "object": "braising"
+        }
+      ]
+    },
+    {
+      "name": "Culinary Cooking Techniques",
+      "description": "Auto-discovered domain with 5 concepts",
+      "entities": [
+        "timbre",
+        "simmering",
+        "broth",
+        "blanching",
+        "tempering"
+      ],
+      "relations": [
+        {
+          "subject": "tempering",
+          "predicate": "produces",
+          "object": "simmering"
+        },
+        {
+          "subject": "simmering",
+          "predicate": "destroys",
+          "object": "tempering"
+        },
+        {
+          "subject": "tempering",
+          "predicate": "destroys",
+          "object": "blanching"
+        },
+        {
+          "subject": "blanching",
+          "predicate": "competes_with",
+          "object": "tempering"
+        },
+        {
+          "subject": "timbre",
+          "predicate": "competes_with",
+          "object": "simmering"
+        },
+        {
+          "subject": "blanching",
+          "predicate": "produces",
+          "object": "simmering"
+        },
+        {
+          "subject": "simmering",
+          "predicate": "destroys",
+          "object": "blanching"
+        },
+        {
+          "subject": "broth",
+          "predicate": "produces",
+          "object": "simmering"
+        },
+        {
+          "subject": "simmering",
+          "predicate": "produces",
+          "object": "timbre"
+        },
+        {
+          "subject": "simmering",
+          "predicate": "depends_on",
+          "object": "broth"
+        },
+        {
+          "subject": "broth",
+          "predicate": "destroys",
+          "object": "blanching"
+        },
+        {
+          "subject": "broth",
+          "predicate": "destroys",
+          "object": "tempering"
+        },
+        {
+          "subject": "tempering",
+          "predicate": "produces",
+          "object": "broth"
+        },
+        {
+          "subject": "blanching",
+          "predicate": "competes_with",
+          "object": "broth"
+        },
+        {
+          "subject": "timbre",
+          "predicate": "destroys",
+          "object": "tempering"
+        }
+      ]
+    },
+    {
+      "name": "Astronomy and Space",
+      "description": "Auto-discovered domain with 7 concepts",
+      "entities": [
+        "symbiosis",
+        "planet",
+        "orbit",
+        "gravity",
+        "black_hole",
+        "asteroid",
+        "comet"
+      ],
+      "relations": [
+        {
+          "subject": "comet",
+          "predicate": "destroys",
+          "object": "asteroid"
+        },
+        {
+          "subject": "black_hole",
+          "predicate": "causes",
+          "object": "gravity"
+        },
+        {
+          "subject": "asteroid",
+          "predicate": "competes_with",
+          "object": "comet"
+        },
+        {
+          "subject": "orbit",
+          "predicate": "causes",
+          "object": "gravity"
+        },
+        {
+          "subject": "asteroid",
+          "predicate": "competes_with",
+          "object": "planet"
+        },
+        {
+          "subject": "gravity",
+          "predicate": "transforms",
+          "object": "black_hole"
+        },
+        {
+          "subject": "orbit",
+          "predicate": "competes_with",
+          "object": "planet"
+        },
+        {
+          "subject": "planet",
+          "predicate": "destroys",
+          "object": "asteroid"
+        },
+        {
+          "subject": "gravity",
+          "predicate": "competes_with",
+          "object": "planet"
+        },
+        {
+          "subject": "orbit",
+          "predicate": "destroys",
+          "object": "asteroid"
+        },
+        {
+          "subject": "asteroid",
+          "predicate": "transforms",
+          "object": "black_hole"
+        },
+        {
+          "subject": "planet",
+          "predicate": "causes",
+          "object": "gravity"
+        },
+        {
+          "subject": "comet",
+          "predicate": "competes_with",
+          "object": "planet"
+        },
+        {
+          "subject": "black_hole",
+          "predicate": "competes_with",
+          "object": "planet"
+        },
+        {
+          "subject": "black_hole",
+          "predicate": "destroys",
+          "object": "asteroid"
+        }
+      ]
+    },
+    {
+      "name": "Music Theory",
+      "description": "Auto-discovered domain with 6 concepts",
+      "entities": [
+        "virus",
+        "database",
+        "crystal",
+        "melody",
+        "chord",
+        "resonance"
+      ],
+      "relations": [
+        {
+          "subject": "chord",
+          "predicate": "contains",
+          "object": "melody"
+        },
+        {
+          "subject": "resonance",
+          "predicate": "contains",
+          "object": "melody"
+        },
+        {
+          "subject": "melody",
+          "predicate": "destroys",
+          "object": "resonance"
+        },
+        {
+          "subject": "melody",
+          "predicate": "competes_with",
+          "object": "chord"
+        },
+        {
+          "subject": "crystal",
+          "predicate": "contains",
+          "object": "melody"
+        },
+        {
+          "subject": "chord",
+          "predicate": "destroys",
+          "object": "resonance"
+        },
+        {
+          "subject": "crystal",
+          "predicate": "destroys",
+          "object": "resonance"
+        },
+        {
+          "subject": "melody",
+          "predicate": "competes_with",
+          "object": "crystal"
+        },
+        {
+          "subject": "chord",
+          "predicate": "causes",
+          "object": "virus"
+        },
+        {
+          "subject": "resonance",
+          "predicate": "creates",
+          "object": "chord"
+        },
+        {
+          "subject": "melody",
+          "predicate": "causes",
+          "object": "virus"
+        },
+        {
+          "subject": "resonance",
+          "predicate": "contains",
+          "object": "crystal"
+        },
+        {
+          "subject": "database",
+          "predicate": "causes",
+          "object": "virus"
+        },
+        {
+          "subject": "crystal",
+          "predicate": "causes",
+          "object": "virus"
+        },
+        {
+          "subject": "database",
+          "predicate": "contains",
+          "object": "crystal"
+        }
+      ]
+    },
+    {
+      "name": "Database Design",
+      "description": "Auto-discovered domain with 4 concepts",
+      "entities": [
+        "algorithm",
+        "scale",
+        "column",
+        "blueprint"
+      ],
+      "relations": [
+        {
+          "subject": "blueprint",
+          "predicate": "transforms",
+          "object": "scale"
+        },
+        {
+          "subject": "algorithm",
+          "predicate": "competes_with",
+          "object": "blueprint"
+        },
+        {
+          "subject": "scale",
+          "predicate": "competes_with",
+          "object": "blueprint"
+        },
+        {
+          "subject": "blueprint",
+          "predicate": "transforms",
+          "object": "algorithm"
+        },
+        {
+          "subject": "algorithm",
+          "predicate": "transforms",
+          "object": "scale"
+        },
+        {
+          "subject": "column",
+          "predicate": "transforms",
+          "object": "scale"
+        },
+        {
+          "subject": "scale",
+          "predicate": "contains",
+          "object": "algorithm"
+        },
+        {
+          "subject": "column",
+          "predicate": "transforms",
+          "object": "algorithm"
+        },
+        {
+          "subject": "column",
+          "predicate": "competes_with",
+          "object": "blueprint"
+        }
+      ]
+    },
+    {
+      "name": "Business and Commercial Law",
+      "description": "Auto-discovered domain with 6 concepts",
+      "entities": [
+        "API",
+        "monopoly",
+        "contract",
+        "arbitration",
+        "injunction",
+        "compliance"
+      ],
+      "relations": [
+        {
+          "subject": "arbitration",
+          "predicate": "requires",
+          "object": "injunction"
+        },
+        {
+          "subject": "contract",
+          "predicate": "regulates",
+          "object": "compliance"
+        },
+        {
+          "subject": "arbitration",
+          "predicate": "competes_with",
+          "object": "contract"
+        },
+        {
+          "subject": "injunction",
+          "predicate": "regulates",
+          "object": "compliance"
+        },
+        {
+          "subject": "monopoly",
+          "predicate": "requires",
+          "object": "contract"
+        },
+        {
+          "subject": "arbitration",
+          "predicate": "competes_with",
+          "object": "monopoly"
+        },
+        {
+          "subject": "contract",
+          "predicate": "competes_with",
+          "object": "monopoly"
+        },
+        {
+          "subject": "injunction",
+          "predicate": "competes_with",
+          "object": "contract"
+        },
+        {
+          "subject": "arbitration",
+          "predicate": "regulates",
+          "object": "compliance"
+        },
+        {
+          "subject": "compliance",
+          "predicate": "competes_with",
+          "object": "contract"
+        },
+        {
+          "subject": "injunction",
+          "predicate": "competes_with",
+          "object": "arbitration"
+        },
+        {
+          "subject": "monopoly",
+          "predicate": "regulates",
+          "object": "compliance"
+        },
+        {
+          "subject": "API",
+          "predicate": "regulates",
+          "object": "compliance"
+        },
+        {
+          "subject": "API",
+          "predicate": "competes_with",
+          "object": "contract"
+        },
+        {
+          "subject": "contract",
+          "predicate": "requires",
+          "object": "injunction"
+        }
+      ]
+    },
+    {
+      "name": "Computer System Fundamentals",
+      "description": "Auto-discovered domain with 6 concepts",
+      "entities": [
+        "thread",
+        "cache",
+        "server",
+        "syncopation",
+        "load",
+        "tort"
+      ],
+      "relations": [
+        {
+          "subject": "thread",
+          "predicate": "requires",
+          "object": "load"
+        },
+        {
+          "subject": "server",
+          "predicate": "requires",
+          "object": "load"
+        },
+        {
+          "subject": "cache",
+          "predicate": "requires",
+          "object": "load"
+        },
+        {
+          "subject": "load",
+          "predicate": "causes",
+          "object": "thread"
+        },
+        {
+          "subject": "load",
+          "predicate": "creates",
+          "object": "server"
+        },
+        {
+          "subject": "syncopation",
+          "predicate": "requires",
+          "object": "load"
+        },
+        {
+          "subject": "syncopation",
+          "predicate": "creates",
+          "object": "server"
+        },
+        {
+          "subject": "server",
+          "predicate": "causes",
+          "object": "thread"
+        },
+        {
+          "subject": "tort",
+          "predicate": "requires",
+          "object": "load"
+        },
+        {
+          "subject": "cache",
+          "predicate": "interacts_with",
+          "object": "syncopation"
+        },
+        {
+          "subject": "load",
+          "predicate": "creates",
+          "object": "cache"
+        },
+        {
+          "subject": "cache",
+          "predicate": "creates",
+          "object": "server"
+        },
+        {
+          "subject": "thread",
+          "predicate": "creates",
+          "object": "server"
+        },
+        {
+          "subject": "syncopation",
+          "predicate": "creates",
+          "object": "cache"
+        },
+        {
+          "subject": "syncopation",
+          "predicate": "causes",
+          "object": "thread"
+        }
+      ]
+    },
+    {
+      "name": "Food Processing Techniques",
+      "description": "Auto-discovered domain with 7 concepts",
+      "entities": [
+        "decomposer",
+        "fermentation",
+        "caramelization",
+        "seasoning",
+        "marination",
+        "dough",
+        "reduction_cooking"
+      ],
+      "relations": [
+        {
+          "subject": "marination",
+          "predicate": "produces",
+          "object": "fermentation"
+        },
+        {
+          "subject": "dough",
+          "predicate": "produces",
+          "object": "fermentation"
+        },
+        {
+          "subject": "reduction_cooking",
+          "predicate": "produces",
+          "object": "fermentation"
+        },
+        {
+          "subject": "reduction_cooking",
+          "predicate": "destroys",
+          "object": "decomposer"
+        },
+        {
+          "subject": "seasoning",
+          "predicate": "produces",
+          "object": "fermentation"
+        },
+        {
+          "subject": "caramelization",
+          "predicate": "produces",
+          "object": "fermentation"
+        },
+        {
+          "subject": "fermentation",
+          "predicate": "destroys",
+          "object": "decomposer"
+        },
+        {
+          "subject": "decomposer",
+          "predicate": "produces",
+          "object": "fermentation"
+        },
+        {
+          "subject": "marination",
+          "predicate": "destroys",
+          "object": "decomposer"
+        },
+        {
+          "subject": "marination",
+          "predicate": "produces",
+          "object": "seasoning"
+        },
+        {
+          "subject": "fermentation",
+          "predicate": "produces",
+          "object": "dough"
+        },
+        {
+          "subject": "dough",
+          "predicate": "destroys",
+          "object": "decomposer"
+        },
+        {
+          "subject": "seasoning",
+          "predicate": "produces",
+          "object": "dough"
+        },
+        {
+          "subject": "reduction_cooking",
+          "predicate": "competes_with",
+          "object": "seasoning"
+        },
+        {
+          "subject": "fermentation",
+          "predicate": "competes_with",
+          "object": "seasoning"
+        }
+      ]
+    }
+  ]
+}
