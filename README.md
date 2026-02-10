@@ -26,7 +26,7 @@ The pipeline found that **V8 engine firing order optimization is literally a pol
 
 ```bash
 # Clone and set up
-git clone https://github.com/YOUR_USERNAME/cross-domain-analogy.git
+git clone https://github.com/rudybear/cross-domain-analogy.git
 cd cross-domain-analogy
 python3 -m venv .venv
 source .venv/bin/activate
