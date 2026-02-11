@@ -1,0 +1,3652 @@
+{
+  "domains": [
+    {
+      "name": "Physics of Vibrations",
+      "description": "Auto-discovered domain with 1 concepts",
+      "entities": [
+        "resonance"
+      ],
+      "relations": []
+    },
+    {
+      "name": "Inorganic Chemistry",
+      "description": "Auto-discovered domain with 2 concepts",
+      "entities": [
+        "covalent_bond",
+        "ionic_bond"
+      ],
+      "relations": [
+        {
+          "subject": "ionic_bond",
+          "predicate": "contains",
+          "object": "covalent_bond"
+        },
+        {
+          "subject": "covalent_bond",
+          "predicate": "transforms",
+          "object": "ionic_bond"
+        }
+      ]
+    },
+    {
+      "name": "Stellar Remnants",
+      "description": "Auto-discovered domain with 2 concepts",
+      "entities": [
+        "red_dwarf",
+        "white_dwarf"
+      ],
+      "relations": [
+        {
+          "subject": "red_dwarf",
+          "predicate": "transforms",
+          "object": "white_dwarf"
+        },
+        {
+          "subject": "white_dwarf",
+          "predicate": "competes_with",
+          "object": "red_dwarf"
+        }
+      ]
+    },
+    {
+      "name": "Food Chemistry",
+      "description": "Auto-discovered domain with 2 concepts",
+      "entities": [
+        "caramelization",
+        "maillard_reaction"
+      ],
+      "relations": [
+        {
+          "subject": "maillard_reaction",
+          "predicate": "produces",
+          "object": "caramelization"
+        },
+        {
+          "subject": "caramelization",
+          "predicate": "produces",
+          "object": "maillard_reaction"
+        }
+      ]
+    },
+    {
+      "name": "Ecological Relationships",
+      "description": "Auto-discovered domain with 2 concepts",
+      "entities": [
+        "predator",
+        "prey"
+      ],
+      "relations": [
+        {
+          "subject": "prey",
+          "predicate": "destroys",
+          "object": "predator"
+        },
+        {
+          "subject": "predator",
+          "predicate": "destroys",
+          "object": "prey"
+        }
+      ]
+    },
+    {
+      "name": "Cognitive Information Processing",
+      "description": "Auto-discovered domain with 3 concepts",
+      "entities": [
+        "attention",
+        "working_memory",
+        "long_term_memory"
+      ],
+      "relations": [
+        {
+          "subject": "working_memory",
+          "predicate": "transforms",
+          "object": "long_term_memory"
+        },
+        {
+          "subject": "long_term_memory",
+          "predicate": "enables",
+          "object": "working_memory"
+        },
+        {
+          "subject": "attention",
+          "predicate": "interacts_with",
+          "object": "working_memory"
+        },
+        {
+          "subject": "attention",
+          "predicate": "interacts_with",
+          "object": "long_term_memory"
+        },
+        {
+          "subject": "working_memory",
+          "predicate": "regulates",
+          "object": "attention"
+        },
+        {
+          "subject": "long_term_memory",
+          "predicate": "regulates",
+          "object": "attention"
+        }
+      ]
+    },
+    {
+      "name": "Cosmology and Astrophysics",
+      "description": "Auto-discovered domain with 4 concepts",
+      "entities": [
+        "solar_wind",
+        "dark_matter",
+        "dark_energy",
+        "cosmic_radiation"
+      ],
+      "relations": [
+        {
+          "subject": "dark_matter",
+          "predicate": "produces",
+          "object": "dark_energy"
+        },
+        {
+          "subject": "dark_energy",
+          "predicate": "contains",
+          "object": "dark_matter"
+        },
+        {
+          "subject": "solar_wind",
+          "predicate": "destroys",
+          "object": "cosmic_radiation"
+        },
+        {
+          "subject": "cosmic_radiation",
+          "predicate": "produces",
+          "object": "solar_wind"
+        },
+        {
+          "subject": "cosmic_radiation",
+          "predicate": "produces",
+          "object": "dark_energy"
+        },
+        {
+          "subject": "cosmic_radiation",
+          "predicate": "contains",
+          "object": "dark_matter"
+        },
+        {
+          "subject": "solar_wind",
+          "predicate": "destroys",
+          "object": "dark_energy"
+        },
+        {
+          "subject": "solar_wind",
+          "predicate": "contains",
+          "object": "dark_matter"
+        },
+        {
+          "subject": "dark_energy",
+          "predicate": "interacts_with",
+          "object": "cosmic_radiation"
+        },
+        {
+          "subject": "dark_matter",
+          "predicate": "produces",
+          "object": "cosmic_radiation"
+        },
+        {
+          "subject": "dark_energy",
+          "predicate": "produces",
+          "object": "solar_wind"
+        },
+        {
+          "subject": "dark_matter",
+          "predicate": "produces",
+          "object": "solar_wind"
+        }
+      ]
+    },
+    {
+      "name": "Economics",
+      "description": "Auto-discovered domain with 3 concepts",
+      "entities": [
+        "market",
+        "supply",
+        "demand"
+      ],
+      "relations": [
+        {
+          "subject": "demand",
+          "predicate": "regulates",
+          "object": "supply"
+        },
+        {
+          "subject": "supply",
+          "predicate": "requires",
+          "object": "demand"
+        },
+        {
+          "subject": "market",
+          "predicate": "requires",
+          "object": "demand"
+        },
+        {
+          "subject": "demand",
+          "predicate": "regulates",
+          "object": "market"
+        },
+        {
+          "subject": "market",
+          "predicate": "regulates",
+          "object": "supply"
+        },
+        {
+          "subject": "supply",
+          "predicate": "regulates",
+          "object": "market"
+        }
+      ]
+    },
+    {
+      "name": "Construction Materials",
+      "description": "Auto-discovered domain with 2 concepts",
+      "entities": [
+        "lintel",
+        "mortar"
+      ],
+      "relations": [
+        {
+          "subject": "truss",
+          "predicate": "produces",
+          "object": "cantilever"
+        },
+        {
+          "subject": "truss",
+          "predicate": "supports",
+          "object": "buttress"
+        },
+        {
+          "subject": "cantilever",
+          "predicate": "supports",
+          "object": "buttress"
+        },
+        {
+          "subject": "buttress",
+          "predicate": "produces",
+          "object": "cantilever"
+        },
+        {
+          "subject": "steel",
+          "predicate": "produces",
+          "object": "alloy"
+        },
+        {
+          "subject": "cantilever",
+          "predicate": "supports",
+          "object": "truss"
+        },
+        {
+          "subject": "steel",
+          "predicate": "supports",
+          "object": "cantilever"
+        },
+        {
+          "subject": "alloy",
+          "predicate": "produces",
+          "object": "steel"
+        },
+        {
+          "subject": "buttress",
+          "predicate": "produces",
+          "object": "truss"
+        },
+        {
+          "subject": "cantilever",
+          "predicate": "produces",
+          "object": "steel"
+        },
+        {
+          "subject": "rebar",
+          "predicate": "produces",
+          "object": "steel"
+        },
+        {
+          "subject": "drywall",
+          "predicate": "supports",
+          "object": "cantilever"
+        },
+        {
+          "subject": "cantilever",
+          "predicate": "produces",
+          "object": "alloy"
+        },
+        {
+          "subject": "rebar",
+          "predicate": "supports",
+          "object": "buttress"
+        },
+        {
+          "subject": "rebar",
+          "predicate": "produces",
+          "object": "cantilever"
+        }
+      ]
+    },
+    {
+      "name": "Neurotransmitter Psychology",
+      "description": "Auto-discovered domain with 4 concepts",
+      "entities": [
+        "hormone",
+        "dopamine",
+        "serotonin",
+        "phobia"
+      ],
+      "relations": [
+        {
+          "subject": "serotonin",
+          "predicate": "produces",
+          "object": "dopamine"
+        },
+        {
+          "subject": "dopamine",
+          "predicate": "regulates",
+          "object": "serotonin"
+        },
+        {
+          "subject": "hormone",
+          "predicate": "produces",
+          "object": "dopamine"
+        },
+        {
+          "subject": "dopamine",
+          "predicate": "regulates",
+          "object": "hormone"
+        },
+        {
+          "subject": "serotonin",
+          "predicate": "regulates",
+          "object": "hormone"
+        },
+        {
+          "subject": "hormone",
+          "predicate": "produces",
+          "object": "serotonin"
+        },
+        {
+          "subject": "phobia",
+          "predicate": "regulates",
+          "object": "hormone"
+        },
+        {
+          "subject": "phobia",
+          "predicate": "produces",
+          "object": "dopamine"
+        },
+        {
+          "subject": "serotonin",
+          "predicate": "causes",
+          "object": "phobia"
+        },
+        {
+          "subject": "hormone",
+          "predicate": "causes",
+          "object": "phobia"
+        },
+        {
+          "subject": "phobia",
+          "predicate": "regulates",
+          "object": "serotonin"
+        },
+        {
+          "subject": "dopamine",
+          "predicate": "causes",
+          "object": "phobia"
+        }
+      ]
+    },
+    {
+      "name": "Music Theory Elements",
+      "description": "Auto-discovered domain with 7 concepts",
+      "entities": [
+        "tempo",
+        "crescendo",
+        "arpeggio",
+        "staccato",
+        "legato",
+        "vibrato",
+        "fermata"
+      ],
+      "relations": [
+        {
+          "subject": "legato",
+          "predicate": "interacts_with",
+          "object": "staccato"
+        },
+        {
+          "subject": "arpeggio",
+          "predicate": "interacts_with",
+          "object": "staccato"
+        },
+        {
+          "subject": "crescendo",
+          "predicate": "interacts_with",
+          "object": "staccato"
+        },
+        {
+          "subject": "vibrato",
+          "predicate": "produces",
+          "object": "staccato"
+        },
+        {
+          "subject": "fermata",
+          "predicate": "interacts_with",
+          "object": "staccato"
+        },
+        {
+          "subject": "legato",
+          "predicate": "transforms",
+          "object": "vibrato"
+        },
+        {
+          "subject": "fermata",
+          "predicate": "transforms",
+          "object": "crescendo"
+        },
+        {
+          "subject": "arpeggio",
+          "predicate": "transforms",
+          "object": "crescendo"
+        },
+        {
+          "subject": "legato",
+          "predicate": "transforms",
+          "object": "crescendo"
+        },
+        {
+          "subject": "legato",
+          "predicate": "transforms",
+          "object": "arpeggio"
+        },
+        {
+          "subject": "staccato",
+          "predicate": "transforms",
+          "object": "crescendo"
+        },
+        {
+          "subject": "tempo",
+          "predicate": "transforms",
+          "object": "crescendo"
+        },
+        {
+          "subject": "vibrato",
+          "predicate": "transforms",
+          "object": "crescendo"
+        },
+        {
+          "subject": "staccato",
+          "predicate": "transforms",
+          "object": "vibrato"
+        },
+        {
+          "subject": "crescendo",
+          "predicate": "transforms",
+          "object": "arpeggio"
+        }
+      ]
+    },
+    {
+      "name": "Criminal Justice System",
+      "description": "Auto-discovered domain with 6 concepts",
+      "entities": [
+        "prosecution",
+        "indictment",
+        "plaintiff",
+        "defendant",
+        "felony",
+        "misdemeanor"
+      ],
+      "relations": [
+        {
+          "subject": "plaintiff",
+          "predicate": "supports",
+          "object": "defendant"
+        },
+        {
+          "subject": "indictment",
+          "predicate": "supports",
+          "object": "prosecution"
+        },
+        {
+          "subject": "defendant",
+          "predicate": "supports",
+          "object": "plaintiff"
+        },
+        {
+          "subject": "misdemeanor",
+          "predicate": "destroys",
+          "object": "felony"
+        },
+        {
+          "subject": "prosecution",
+          "predicate": "supports",
+          "object": "indictment"
+        },
+        {
+          "subject": "defendant",
+          "predicate": "regulates",
+          "object": "prosecution"
+        },
+        {
+          "subject": "felony",
+          "predicate": "regulates",
+          "object": "misdemeanor"
+        },
+        {
+          "subject": "prosecution",
+          "predicate": "interacts_with",
+          "object": "defendant"
+        },
+        {
+          "subject": "plaintiff",
+          "predicate": "regulates",
+          "object": "prosecution"
+        },
+        {
+          "subject": "indictment",
+          "predicate": "interacts_with",
+          "object": "defendant"
+        },
+        {
+          "subject": "prosecution",
+          "predicate": "supports",
+          "object": "plaintiff"
+        },
+        {
+          "subject": "indictment",
+          "predicate": "destroys",
+          "object": "felony"
+        },
+        {
+          "subject": "felony",
+          "predicate": "supports",
+          "object": "indictment"
+        },
+        {
+          "subject": "felony",
+          "predicate": "supports",
+          "object": "prosecution"
+        },
+        {
+          "subject": "misdemeanor",
+          "predicate": "supports",
+          "object": "defendant"
+        }
+      ]
+    },
+    {
+      "name": "Food Science Technology",
+      "description": "Auto-discovered domain with 3 concepts",
+      "entities": [
+        "emulsion",
+        "brine",
+        "leavening"
+      ],
+      "relations": [
+        {
+          "subject": "emulsion",
+          "predicate": "produces",
+          "object": "leavening"
+        },
+        {
+          "subject": "brine",
+          "predicate": "produces",
+          "object": "leavening"
+        },
+        {
+          "subject": "emulsion",
+          "predicate": "produces",
+          "object": "brine"
+        },
+        {
+          "subject": "leavening",
+          "predicate": "produces",
+          "object": "brine"
+        },
+        {
+          "subject": "leavening",
+          "predicate": "produces",
+          "object": "emulsion"
+        },
+        {
+          "subject": "brine",
+          "predicate": "produces",
+          "object": "emulsion"
+        }
+      ]
+    },
+    {
+      "name": "Software Architecture",
+      "description": "Auto-discovered domain with 4 concepts",
+      "entities": [
+        "microservice",
+        "blueprint",
+        "facade",
+        "floor_plan"
+      ],
+      "relations": [
+        {
+          "subject": "floor_plan",
+          "predicate": "produces",
+          "object": "blueprint"
+        },
+        {
+          "subject": "blueprint",
+          "predicate": "transforms",
+          "object": "floor_plan"
+        },
+        {
+          "subject": "microservice",
+          "predicate": "transforms",
+          "object": "facade"
+        },
+        {
+          "subject": "microservice",
+          "predicate": "produces",
+          "object": "blueprint"
+        },
+        {
+          "subject": "facade",
+          "predicate": "produces",
+          "object": "blueprint"
+        },
+        {
+          "subject": "blueprint",
+          "predicate": "transforms",
+          "object": "facade"
+        },
+        {
+          "subject": "floor_plan",
+          "predicate": "transforms",
+          "object": "facade"
+        },
+        {
+          "subject": "facade",
+          "predicate": "regulates",
+          "object": "microservice"
+        },
+        {
+          "subject": "facade",
+          "predicate": "creates",
+          "object": "floor_plan"
+        },
+        {
+          "subject": "blueprint",
+          "predicate": "enables",
+          "object": "microservice"
+        },
+        {
+          "subject": "microservice",
+          "predicate": "creates",
+          "object": "floor_plan"
+        },
+        {
+          "subject": "floor_plan",
+          "predicate": "enables",
+          "object": "microservice"
+        }
+      ]
+    },
+    {
+      "name": "Astrophysics",
+      "description": "Auto-discovered domain with 9 concepts",
+      "entities": [
+        "galaxy",
+        "black_hole",
+        "supernova",
+        "quasar",
+        "neutron_star",
+        "light_year",
+        "accretion_disk",
+        "magnetar",
+        "protostar"
+      ],
+      "relations": [
+        {
+          "subject": "interrupt",
+          "predicate": "regulates",
+          "object": "deadlock"
+        },
+        {
+          "subject": "deadlock",
+          "predicate": "enables",
+          "object": "interrupt"
+        },
+        {
+          "subject": "pulsar",
+          "predicate": "prevents",
+          "object": "deadlock"
+        },
+        {
+          "subject": "arbitrage",
+          "predicate": "regulates",
+          "object": "dividend"
+        },
+        {
+          "subject": "orbit",
+          "predicate": "transforms",
+          "object": "pulsar"
+        },
+        {
+          "subject": "dividend",
+          "predicate": "prevents",
+          "object": "deadlock"
+        },
+        {
+          "subject": "orbit",
+          "predicate": "enables",
+          "object": "interrupt"
+        },
+        {
+          "subject": "arbitrage",
+          "predicate": "prevents",
+          "object": "deadlock"
+        },
+        {
+          "subject": "orbit",
+          "predicate": "prevents",
+          "object": "deadlock"
+        },
+        {
+          "subject": "pulsar",
+          "predicate": "regulates",
+          "object": "dividend"
+        },
+        {
+          "subject": "deadlock",
+          "predicate": "regulates",
+          "object": "dividend"
+        },
+        {
+          "subject": "dividend",
+          "predicate": "regulates",
+          "object": "arbitrage"
+        },
+        {
+          "subject": "column",
+          "predicate": "regulates",
+          "object": "dividend"
+        },
+        {
+          "subject": "orbit",
+          "predicate": "regulates",
+          "object": "dividend"
+        },
+        {
+          "subject": "deadlock",
+          "predicate": "transforms",
+          "object": "pulsar"
+        }
+      ]
+    },
+    {
+      "name": "Ecological Food Web",
+      "description": "Auto-discovered domain with 7 concepts",
+      "entities": [
+        "food_chain",
+        "decomposer",
+        "symbiosis",
+        "trophic_level",
+        "keystone_species",
+        "invasive_species",
+        "mutualism"
+      ],
+      "relations": [
+        {
+          "subject": "mutualism",
+          "predicate": "interacts_with",
+          "object": "symbiosis"
+        },
+        {
+          "subject": "symbiosis",
+          "predicate": "supports",
+          "object": "mutualism"
+        },
+        {
+          "subject": "trophic_level",
+          "predicate": "produces",
+          "object": "food_chain"
+        },
+        {
+          "subject": "food_chain",
+          "predicate": "produces",
+          "object": "trophic_level"
+        },
+        {
+          "subject": "trophic_level",
+          "predicate": "interacts_with",
+          "object": "symbiosis"
+        },
+        {
+          "subject": "food_chain",
+          "predicate": "interacts_with",
+          "object": "symbiosis"
+        },
+        {
+          "subject": "keystone_species",
+          "predicate": "interacts_with",
+          "object": "symbiosis"
+        },
+        {
+          "subject": "decomposer",
+          "predicate": "interacts_with",
+          "object": "symbiosis"
+        },
+        {
+          "subject": "invasive_species",
+          "predicate": "interacts_with",
+          "object": "symbiosis"
+        },
+        {
+          "subject": "invasive_species",
+          "predicate": "supports",
+          "object": "keystone_species"
+        },
+        {
+          "subject": "decomposer",
+          "predicate": "depends_on",
+          "object": "food_chain"
+        },
+        {
+          "subject": "keystone_species",
+          "predicate": "produces",
+          "object": "food_chain"
+        },
+        {
+          "subject": "trophic_level",
+          "predicate": "destroys",
+          "object": "decomposer"
+        },
+        {
+          "subject": "keystone_species",
+          "predicate": "destroys",
+          "object": "invasive_species"
+        },
+        {
+          "subject": "food_chain",
+          "predicate": "destroys",
+          "object": "decomposer"
+        }
+      ]
+    },
+    {
+      "name": "Law and Procedure",
+      "description": "Auto-discovered domain with 7 concepts",
+      "entities": [
+        "statute",
+        "jurisdiction",
+        "appeal",
+        "arbitration",
+        "due_process",
+        "litigation",
+        "jurisprudence"
+      ],
+      "relations": [
+        {
+          "subject": "jurisprudence",
+          "predicate": "regulates",
+          "object": "jurisdiction"
+        },
+        {
+          "subject": "arbitration",
+          "predicate": "regulates",
+          "object": "litigation"
+        },
+        {
+          "subject": "litigation",
+          "predicate": "regulates",
+          "object": "arbitration"
+        },
+        {
+          "subject": "jurisdiction",
+          "predicate": "supports",
+          "object": "jurisprudence"
+        },
+        {
+          "subject": "due_process",
+          "predicate": "regulates",
+          "object": "jurisdiction"
+        },
+        {
+          "subject": "litigation",
+          "predicate": "regulates",
+          "object": "jurisdiction"
+        },
+        {
+          "subject": "arbitration",
+          "predicate": "regulates",
+          "object": "jurisdiction"
+        },
+        {
+          "subject": "statute",
+          "predicate": "regulates",
+          "object": "jurisdiction"
+        },
+        {
+          "subject": "due_process",
+          "predicate": "supports",
+          "object": "jurisprudence"
+        },
+        {
+          "subject": "jurisdiction",
+          "predicate": "regulates",
+          "object": "litigation"
+        },
+        {
+          "subject": "jurisprudence",
+          "predicate": "regulates",
+          "object": "litigation"
+        },
+        {
+          "subject": "jurisprudence",
+          "predicate": "regulates",
+          "object": "due_process"
+        },
+        {
+          "subject": "jurisprudence",
+          "predicate": "regulates",
+          "object": "statute"
+        },
+        {
+          "subject": "jurisdiction",
+          "predicate": "regulates",
+          "object": "statute"
+        },
+        {
+          "subject": "appeal",
+          "predicate": "regulates",
+          "object": "jurisdiction"
+        }
+      ]
+    },
+    {
+      "name": "Anatomy",
+      "description": "Auto-discovered domain with 3 concepts",
+      "entities": [
+        "cell",
+        "neuron",
+        "organ"
+      ],
+      "relations": [
+        {
+          "subject": "cell",
+          "predicate": "regulates",
+          "object": "neuron"
+        },
+        {
+          "subject": "neuron",
+          "predicate": "regulates",
+          "object": "cell"
+        },
+        {
+          "subject": "organ",
+          "predicate": "regulates",
+          "object": "neuron"
+        },
+        {
+          "subject": "organ",
+          "predicate": "regulates",
+          "object": "cell"
+        },
+        {
+          "subject": "cell",
+          "predicate": "regulates",
+          "object": "organ"
+        },
+        {
+          "subject": "neuron",
+          "predicate": "regulates",
+          "object": "organ"
+        }
+      ]
+    },
+    {
+      "name": "Biochemical Processes",
+      "description": "Auto-discovered domain with 9 concepts",
+      "entities": [
+        "combustion",
+        "glucose",
+        "metabolism",
+        "catalyst",
+        "oxidation",
+        "titration",
+        "electrolysis",
+        "photosynthesis",
+        "fermentation"
+      ],
+      "relations": [
+        {
+          "subject": "combustion",
+          "predicate": "produces",
+          "object": "fermentation"
+        },
+        {
+          "subject": "oxidation",
+          "predicate": "produces",
+          "object": "combustion"
+        },
+        {
+          "subject": "metabolism",
+          "predicate": "produces",
+          "object": "photosynthesis"
+        },
+        {
+          "subject": "photosynthesis",
+          "predicate": "regulates",
+          "object": "metabolism"
+        },
+        {
+          "subject": "oxidation",
+          "predicate": "produces",
+          "object": "fermentation"
+        },
+        {
+          "subject": "combustion",
+          "predicate": "regulates",
+          "object": "metabolism"
+        },
+        {
+          "subject": "metabolism",
+          "predicate": "produces",
+          "object": "combustion"
+        },
+        {
+          "subject": "metabolism",
+          "predicate": "produces",
+          "object": "fermentation"
+        },
+        {
+          "subject": "photosynthesis",
+          "predicate": "produces",
+          "object": "fermentation"
+        },
+        {
+          "subject": "oxidation",
+          "predicate": "produces",
+          "object": "electrolysis"
+        },
+        {
+          "subject": "fermentation",
+          "predicate": "produces",
+          "object": "combustion"
+        },
+        {
+          "subject": "electrolysis",
+          "predicate": "produces",
+          "object": "fermentation"
+        },
+        {
+          "subject": "combustion",
+          "predicate": "causes",
+          "object": "oxidation"
+        },
+        {
+          "subject": "fermentation",
+          "predicate": "regulates",
+          "object": "metabolism"
+        },
+        {
+          "subject": "combustion",
+          "predicate": "produces",
+          "object": "photosynthesis"
+        }
+      ]
+    },
+    {
+      "name": "Computer Systems Fundamentals",
+      "description": "Auto-discovered domain with 8 concepts",
+      "entities": [
+        "algorithm",
+        "database",
+        "network",
+        "encryption",
+        "operating_system",
+        "virtualization",
+        "recursion",
+        "binary_tree"
+      ],
+      "relations": [
+        {
+          "subject": "operating_system",
+          "predicate": "enables",
+          "object": "virtualization"
+        },
+        {
+          "subject": "virtualization",
+          "predicate": "interacts_with",
+          "object": "operating_system"
+        },
+        {
+          "subject": "binary_tree",
+          "predicate": "transforms",
+          "object": "recursion"
+        },
+        {
+          "subject": "recursion",
+          "predicate": "transforms",
+          "object": "binary_tree"
+        },
+        {
+          "subject": "operating_system",
+          "predicate": "requires",
+          "object": "database"
+        },
+        {
+          "subject": "database",
+          "predicate": "enables",
+          "object": "operating_system"
+        },
+        {
+          "subject": "algorithm",
+          "predicate": "transforms",
+          "object": "recursion"
+        },
+        {
+          "subject": "virtualization",
+          "predicate": "transforms",
+          "object": "encryption"
+        },
+        {
+          "subject": "database",
+          "predicate": "enables",
+          "object": "virtualization"
+        },
+        {
+          "subject": "network",
+          "predicate": "requires",
+          "object": "database"
+        },
+        {
+          "subject": "encryption",
+          "predicate": "enables",
+          "object": "virtualization"
+        },
+        {
+          "subject": "algorithm",
+          "predicate": "transforms",
+          "object": "binary_tree"
+        },
+        {
+          "subject": "virtualization",
+          "predicate": "requires",
+          "object": "database"
+        },
+        {
+          "subject": "database",
+          "predicate": "transforms",
+          "object": "algorithm"
+        },
+        {
+          "subject": "algorithm",
+          "predicate": "enables",
+          "object": "encryption"
+        }
+      ]
+    },
+    {
+      "name": "Food Preservation Methods",
+      "description": "Auto-discovered domain with 5 concepts",
+      "entities": [
+        "seasoning",
+        "simmering",
+        "tempering",
+        "smoking",
+        "curing"
+      ],
+      "relations": [
+        {
+          "subject": "seasoning",
+          "predicate": "transforms",
+          "object": "tempering"
+        },
+        {
+          "subject": "tempering",
+          "predicate": "prevents",
+          "object": "curing"
+        },
+        {
+          "subject": "simmering",
+          "predicate": "transforms",
+          "object": "tempering"
+        },
+        {
+          "subject": "curing",
+          "predicate": "transforms",
+          "object": "tempering"
+        },
+        {
+          "subject": "tempering",
+          "predicate": "produces",
+          "object": "seasoning"
+        },
+        {
+          "subject": "tempering",
+          "predicate": "interacts_with",
+          "object": "simmering"
+        },
+        {
+          "subject": "simmering",
+          "predicate": "prevents",
+          "object": "curing"
+        },
+        {
+          "subject": "seasoning",
+          "predicate": "prevents",
+          "object": "curing"
+        },
+        {
+          "subject": "smoking",
+          "predicate": "produces",
+          "object": "curing"
+        },
+        {
+          "subject": "curing",
+          "predicate": "interacts_with",
+          "object": "simmering"
+        },
+        {
+          "subject": "curing",
+          "predicate": "contains",
+          "object": "seasoning"
+        },
+        {
+          "subject": "smoking",
+          "predicate": "transforms",
+          "object": "tempering"
+        },
+        {
+          "subject": "curing",
+          "predicate": "regulates",
+          "object": "smoking"
+        },
+        {
+          "subject": "seasoning",
+          "predicate": "interacts_with",
+          "object": "simmering"
+        },
+        {
+          "subject": "simmering",
+          "predicate": "produces",
+          "object": "seasoning"
+        }
+      ]
+    },
+    {
+      "name": "Cognitive Psychology",
+      "description": "Auto-discovered domain with 12 concepts",
+      "entities": [
+        "gene_expression",
+        "cognition",
+        "emotion",
+        "perception",
+        "anxiety",
+        "consciousness",
+        "cognitive_bias",
+        "attachment_theory",
+        "introspection",
+        "neuroplasticity",
+        "psychotherapy",
+        "cognitive_dissonance"
+      ],
+      "relations": [
+        {
+          "subject": "consciousness",
+          "predicate": "enables",
+          "object": "cognition"
+        },
+        {
+          "subject": "perception",
+          "predicate": "enables",
+          "object": "cognition"
+        },
+        {
+          "subject": "cognition",
+          "predicate": "transforms",
+          "object": "perception"
+        },
+        {
+          "subject": "emotion",
+          "predicate": "enables",
+          "object": "cognition"
+        },
+        {
+          "subject": "cognition",
+          "predicate": "transforms",
+          "object": "introspection"
+        },
+        {
+          "subject": "cognition",
+          "predicate": "transforms",
+          "object": "consciousness"
+        },
+        {
+          "subject": "introspection",
+          "predicate": "interacts_with",
+          "object": "cognition"
+        },
+        {
+          "subject": "consciousness",
+          "predicate": "interacts_with",
+          "object": "perception"
+        },
+        {
+          "subject": "neuroplasticity",
+          "predicate": "requires",
+          "object": "cognition"
+        },
+        {
+          "subject": "consciousness",
+          "predicate": "transforms",
+          "object": "introspection"
+        },
+        {
+          "subject": "introspection",
+          "predicate": "interacts_with",
+          "object": "perception"
+        },
+        {
+          "subject": "emotion",
+          "predicate": "transforms",
+          "object": "perception"
+        },
+        {
+          "subject": "perception",
+          "predicate": "transforms",
+          "object": "introspection"
+        },
+        {
+          "subject": "cognition",
+          "predicate": "creates",
+          "object": "emotion"
+        },
+        {
+          "subject": "cognitive_bias",
+          "predicate": "enables",
+          "object": "cognition"
+        }
+      ]
+    },
+    {
+      "name": "Telecommunications",
+      "description": "Auto-discovered domain with 6 concepts",
+      "entities": [
+        "transmission",
+        "bandwidth",
+        "latency",
+        "throughput",
+        "modulation",
+        "compliance"
+      ],
+      "relations": [
+        {
+          "subject": "throughput",
+          "predicate": "regulates",
+          "object": "bandwidth"
+        },
+        {
+          "subject": "bandwidth",
+          "predicate": "regulates",
+          "object": "throughput"
+        },
+        {
+          "subject": "throughput",
+          "predicate": "regulates",
+          "object": "compliance"
+        },
+        {
+          "subject": "latency",
+          "predicate": "regulates",
+          "object": "bandwidth"
+        },
+        {
+          "subject": "latency",
+          "predicate": "produces",
+          "object": "throughput"
+        },
+        {
+          "subject": "transmission",
+          "predicate": "regulates",
+          "object": "compliance"
+        },
+        {
+          "subject": "bandwidth",
+          "predicate": "regulates",
+          "object": "compliance"
+        },
+        {
+          "subject": "throughput",
+          "predicate": "transforms",
+          "object": "latency"
+        },
+        {
+          "subject": "modulation",
+          "predicate": "regulates",
+          "object": "bandwidth"
+        },
+        {
+          "subject": "latency",
+          "predicate": "regulates",
+          "object": "compliance"
+        },
+        {
+          "subject": "bandwidth",
+          "predicate": "transforms",
+          "object": "latency"
+        },
+        {
+          "subject": "modulation",
+          "predicate": "regulates",
+          "object": "compliance"
+        },
+        {
+          "subject": "bandwidth",
+          "predicate": "transforms",
+          "object": "modulation"
+        },
+        {
+          "subject": "modulation",
+          "predicate": "produces",
+          "object": "transmission"
+        },
+        {
+          "subject": "throughput",
+          "predicate": "transforms",
+          "object": "transmission"
+        }
+      ]
+    },
+    {
+      "name": "Economics and Finance",
+      "description": "Auto-discovered domain with 7 concepts",
+      "entities": [
+        "GDP",
+        "trade",
+        "currency",
+        "monopoly",
+        "commodity",
+        "stock_exchange",
+        "bond_market"
+      ],
+      "relations": [
+        {
+          "subject": "monetary_policy",
+          "predicate": "regulates",
+          "object": "fiscal_policy"
+        },
+        {
+          "subject": "fiscal_policy",
+          "predicate": "regulates",
+          "object": "monetary_policy"
+        },
+        {
+          "subject": "central_bank",
+          "predicate": "regulates",
+          "object": "monetary_policy"
+        },
+        {
+          "subject": "monetary_policy",
+          "predicate": "regulates",
+          "object": "central_bank"
+        },
+        {
+          "subject": "central_bank",
+          "predicate": "regulates",
+          "object": "fiscal_policy"
+        },
+        {
+          "subject": "interest_rate",
+          "predicate": "regulates",
+          "object": "monetary_policy"
+        },
+        {
+          "subject": "fiscal_policy",
+          "predicate": "regulates",
+          "object": "central_bank"
+        },
+        {
+          "subject": "inflation",
+          "predicate": "regulates",
+          "object": "recession"
+        },
+        {
+          "subject": "interest_rate",
+          "predicate": "regulates",
+          "object": "fiscal_policy"
+        },
+        {
+          "subject": "monetary_policy",
+          "predicate": "regulates",
+          "object": "interest_rate"
+        },
+        {
+          "subject": "inflation",
+          "predicate": "regulates",
+          "object": "monetary_policy"
+        },
+        {
+          "subject": "inflation",
+          "predicate": "regulates",
+          "object": "interest_rate"
+        },
+        {
+          "subject": "inflation",
+          "predicate": "regulates",
+          "object": "fiscal_policy"
+        },
+        {
+          "subject": "interest_rate",
+          "predicate": "regulates",
+          "object": "central_bank"
+        },
+        {
+          "subject": "recession",
+          "predicate": "regulates",
+          "object": "fiscal_policy"
+        }
+      ]
+    },
+    {
+      "name": "Economics and Finance",
+      "description": "Auto-discovered domain with 8 concepts",
+      "entities": [
+        "inflation",
+        "recession",
+        "interest_rate",
+        "fiscal_policy",
+        "monetary_policy",
+        "subsidy",
+        "depreciation",
+        "central_bank"
+      ],
+      "relations": [
+        {
+          "subject": "monetary_policy",
+          "predicate": "regulates",
+          "object": "fiscal_policy"
+        },
+        {
+          "subject": "fiscal_policy",
+          "predicate": "regulates",
+          "object": "monetary_policy"
+        },
+        {
+          "subject": "central_bank",
+          "predicate": "regulates",
+          "object": "monetary_policy"
+        },
+        {
+          "subject": "monetary_policy",
+          "predicate": "regulates",
+          "object": "central_bank"
+        },
+        {
+          "subject": "central_bank",
+          "predicate": "regulates",
+          "object": "fiscal_policy"
+        },
+        {
+          "subject": "interest_rate",
+          "predicate": "regulates",
+          "object": "monetary_policy"
+        },
+        {
+          "subject": "fiscal_policy",
+          "predicate": "regulates",
+          "object": "central_bank"
+        },
+        {
+          "subject": "inflation",
+          "predicate": "regulates",
+          "object": "recession"
+        },
+        {
+          "subject": "interest_rate",
+          "predicate": "regulates",
+          "object": "fiscal_policy"
+        },
+        {
+          "subject": "monetary_policy",
+          "predicate": "regulates",
+          "object": "interest_rate"
+        },
+        {
+          "subject": "inflation",
+          "predicate": "regulates",
+          "object": "monetary_policy"
+        },
+        {
+          "subject": "inflation",
+          "predicate": "regulates",
+          "object": "interest_rate"
+        },
+        {
+          "subject": "inflation",
+          "predicate": "regulates",
+          "object": "fiscal_policy"
+        },
+        {
+          "subject": "interest_rate",
+          "predicate": "regulates",
+          "object": "central_bank"
+        },
+        {
+          "subject": "recession",
+          "predicate": "regulates",
+          "object": "fiscal_policy"
+        }
+      ]
+    },
+    {
+      "name": "Ecological Systems",
+      "description": "Auto-discovered domain with 8 concepts",
+      "entities": [
+        "ecosystem",
+        "habitat",
+        "biodiversity",
+        "nitrogen_cycle",
+        "carbon_cycle",
+        "biome",
+        "coral_reef",
+        "wetland"
+      ],
+      "relations": [
+        {
+          "subject": "carbon_cycle",
+          "predicate": "produces",
+          "object": "nitrogen_cycle"
+        },
+        {
+          "subject": "nitrogen_cycle",
+          "predicate": "regulates",
+          "object": "carbon_cycle"
+        },
+        {
+          "subject": "ecosystem",
+          "predicate": "depends_on",
+          "object": "biodiversity"
+        },
+        {
+          "subject": "biodiversity",
+          "predicate": "regulates",
+          "object": "ecosystem"
+        },
+        {
+          "subject": "ecosystem",
+          "predicate": "produces",
+          "object": "nitrogen_cycle"
+        },
+        {
+          "subject": "coral_reef",
+          "predicate": "regulates",
+          "object": "ecosystem"
+        },
+        {
+          "subject": "wetland",
+          "predicate": "regulates",
+          "object": "ecosystem"
+        },
+        {
+          "subject": "wetland",
+          "predicate": "interacts_with",
+          "object": "biodiversity"
+        },
+        {
+          "subject": "biodiversity",
+          "predicate": "produces",
+          "object": "nitrogen_cycle"
+        },
+        {
+          "subject": "ecosystem",
+          "predicate": "produces",
+          "object": "carbon_cycle"
+        },
+        {
+          "subject": "nitrogen_cycle",
+          "predicate": "regulates",
+          "object": "ecosystem"
+        },
+        {
+          "subject": "coral_reef",
+          "predicate": "regulates",
+          "object": "biodiversity"
+        },
+        {
+          "subject": "ecosystem",
+          "predicate": "destroys",
+          "object": "coral_reef"
+        },
+        {
+          "subject": "carbon_cycle",
+          "predicate": "interacts_with",
+          "object": "ecosystem"
+        },
+        {
+          "subject": "nitrogen_cycle",
+          "predicate": "interacts_with",
+          "object": "biodiversity"
+        }
+      ]
+    },
+    {
+      "name": "Culinary Cooking Techniques",
+      "description": "Auto-discovered domain with 6 concepts",
+      "entities": [
+        "blanching",
+        "braising",
+        "deglaze",
+        "sous_vide",
+        "julienne",
+        "reduction_sauce"
+      ],
+      "relations": [
+        {
+          "subject": "braising",
+          "predicate": "produces",
+          "object": "blanching"
+        },
+        {
+          "subject": "deglaze",
+          "predicate": "produces",
+          "object": "braising"
+        },
+        {
+          "subject": "deglaze",
+          "predicate": "produces",
+          "object": "blanching"
+        },
+        {
+          "subject": "sous_vide",
+          "predicate": "produces",
+          "object": "braising"
+        },
+        {
+          "subject": "sous_vide",
+          "predicate": "produces",
+          "object": "blanching"
+        },
+        {
+          "subject": "blanching",
+          "predicate": "produces",
+          "object": "braising"
+        },
+        {
+          "subject": "reduction_sauce",
+          "predicate": "transforms",
+          "object": "deglaze"
+        },
+        {
+          "subject": "deglaze",
+          "predicate": "produces",
+          "object": "reduction_sauce"
+        },
+        {
+          "subject": "braising",
+          "predicate": "transforms",
+          "object": "deglaze"
+        },
+        {
+          "subject": "julienne",
+          "predicate": "produces",
+          "object": "blanching"
+        },
+        {
+          "subject": "reduction_sauce",
+          "predicate": "produces",
+          "object": "braising"
+        },
+        {
+          "subject": "reduction_sauce",
+          "predicate": "produces",
+          "object": "blanching"
+        },
+        {
+          "subject": "sous_vide",
+          "predicate": "produces",
+          "object": "reduction_sauce"
+        },
+        {
+          "subject": "braising",
+          "predicate": "produces",
+          "object": "reduction_sauce"
+        },
+        {
+          "subject": "sous_vide",
+          "predicate": "transforms",
+          "object": "deglaze"
+        }
+      ]
+    },
+    {
+      "name": "Music Theory",
+      "description": "Auto-discovered domain with 8 concepts",
+      "entities": [
+        "melody",
+        "harmony",
+        "rhythm",
+        "syncopation",
+        "counterpoint",
+        "dissonance",
+        "consonance",
+        "empathy"
+      ],
+      "relations": [
+        {
+          "subject": "pitch",
+          "predicate": "transforms",
+          "object": "roof_pitch"
+        },
+        {
+          "subject": "roof_pitch",
+          "predicate": "transforms",
+          "object": "pitch"
+        },
+        {
+          "subject": "roof_pitch",
+          "predicate": "regulates",
+          "object": "cadence"
+        },
+        {
+          "subject": "pitch",
+          "predicate": "regulates",
+          "object": "cadence"
+        },
+        {
+          "subject": "cadence",
+          "predicate": "transforms",
+          "object": "roof_pitch"
+        },
+        {
+          "subject": "chord",
+          "predicate": "regulates",
+          "object": "cadence"
+        },
+        {
+          "subject": "bond",
+          "predicate": "regulates",
+          "object": "cadence"
+        },
+        {
+          "subject": "chord",
+          "predicate": "transforms",
+          "object": "roof_pitch"
+        },
+        {
+          "subject": "cadence",
+          "predicate": "transforms",
+          "object": "pitch"
+        },
+        {
+          "subject": "bond",
+          "predicate": "transforms",
+          "object": "roof_pitch"
+        },
+        {
+          "subject": "chord",
+          "predicate": "transforms",
+          "object": "pitch"
+        },
+        {
+          "subject": "bond",
+          "predicate": "transforms",
+          "object": "pitch"
+        },
+        {
+          "subject": "chord",
+          "predicate": "regulates",
+          "object": "bond"
+        },
+        {
+          "subject": "bond",
+          "predicate": "transforms",
+          "object": "chord"
+        },
+        {
+          "subject": "cadence",
+          "predicate": "contains",
+          "object": "chord"
+        }
+      ]
+    },
+    {
+      "name": "French Culinary Techniques",
+      "description": "Auto-discovered domain with 3 concepts",
+      "entities": [
+        "broth",
+        "roux",
+        "flambe"
+      ],
+      "relations": [
+        {
+          "subject": "roux",
+          "predicate": "produces",
+          "object": "broth"
+        },
+        {
+          "subject": "broth",
+          "predicate": "produces",
+          "object": "roux"
+        },
+        {
+          "subject": "roux",
+          "predicate": "produces",
+          "object": "flambe"
+        },
+        {
+          "subject": "flambe",
+          "predicate": "produces",
+          "object": "broth"
+        },
+        {
+          "subject": "flambe",
+          "predicate": "produces",
+          "object": "roux"
+        },
+        {
+          "subject": "broth",
+          "predicate": "transforms",
+          "object": "flambe"
+        }
+      ]
+    },
+    {
+      "name": "Psychological Adaptation Processes",
+      "description": "Auto-discovered domain with 10 concepts",
+      "entities": [
+        "immune_response",
+        "adaptation",
+        "motivation",
+        "behavior",
+        "conditioning",
+        "trauma",
+        "reinforcement",
+        "habituation",
+        "resilience",
+        "mediation"
+      ],
+      "relations": [
+        {
+          "subject": "habituation",
+          "predicate": "interacts_with",
+          "object": "conditioning"
+        },
+        {
+          "subject": "conditioning",
+          "predicate": "transforms",
+          "object": "habituation"
+        },
+        {
+          "subject": "reinforcement",
+          "predicate": "interacts_with",
+          "object": "conditioning"
+        },
+        {
+          "subject": "conditioning",
+          "predicate": "depends_on",
+          "object": "reinforcement"
+        },
+        {
+          "subject": "adaptation",
+          "predicate": "interacts_with",
+          "object": "mediation"
+        },
+        {
+          "subject": "motivation",
+          "predicate": "interacts_with",
+          "object": "mediation"
+        },
+        {
+          "subject": "adaptation",
+          "predicate": "transforms",
+          "object": "habituation"
+        },
+        {
+          "subject": "reinforcement",
+          "predicate": "transforms",
+          "object": "habituation"
+        },
+        {
+          "subject": "adaptation",
+          "predicate": "interacts_with",
+          "object": "resilience"
+        },
+        {
+          "subject": "habituation",
+          "predicate": "interacts_with",
+          "object": "mediation"
+        },
+        {
+          "subject": "immune_response",
+          "predicate": "depends_on",
+          "object": "resilience"
+        },
+        {
+          "subject": "habituation",
+          "predicate": "depends_on",
+          "object": "resilience"
+        },
+        {
+          "subject": "habituation",
+          "predicate": "depends_on",
+          "object": "reinforcement"
+        },
+        {
+          "subject": "habituation",
+          "predicate": "transforms",
+          "object": "adaptation"
+        },
+        {
+          "subject": "motivation",
+          "predicate": "interacts_with",
+          "object": "conditioning"
+        }
+      ]
+    },
+    {
+      "name": "Financial Management",
+      "description": "Auto-discovered domain with 6 concepts",
+      "entities": [
+        "debt",
+        "investment",
+        "liquidity",
+        "liability",
+        "contract",
+        "fiduciary"
+      ],
+      "relations": [
+        {
+          "subject": "liquidity",
+          "predicate": "regulates",
+          "object": "liability"
+        },
+        {
+          "subject": "debt",
+          "predicate": "regulates",
+          "object": "investment"
+        },
+        {
+          "subject": "investment",
+          "predicate": "regulates",
+          "object": "fiduciary"
+        },
+        {
+          "subject": "liability",
+          "predicate": "regulates",
+          "object": "fiduciary"
+        },
+        {
+          "subject": "fiduciary",
+          "predicate": "regulates",
+          "object": "investment"
+        },
+        {
+          "subject": "liability",
+          "predicate": "regulates",
+          "object": "liquidity"
+        },
+        {
+          "subject": "liquidity",
+          "predicate": "regulates",
+          "object": "investment"
+        },
+        {
+          "subject": "debt",
+          "predicate": "regulates",
+          "object": "liability"
+        },
+        {
+          "subject": "fiduciary",
+          "predicate": "produces",
+          "object": "liability"
+        },
+        {
+          "subject": "debt",
+          "predicate": "regulates",
+          "object": "fiduciary"
+        },
+        {
+          "subject": "investment",
+          "predicate": "regulates",
+          "object": "liability"
+        },
+        {
+          "subject": "liability",
+          "predicate": "regulates",
+          "object": "investment"
+        },
+        {
+          "subject": "contract",
+          "predicate": "regulates",
+          "object": "liability"
+        },
+        {
+          "subject": "contract",
+          "predicate": "regulates",
+          "object": "investment"
+        },
+        {
+          "subject": "liquidity",
+          "predicate": "regulates",
+          "object": "fiduciary"
+        }
+      ]
+    },
+    {
+      "name": "Internal Combustion",
+      "description": "Auto-discovered domain with 8 concepts",
+      "entities": [
+        "engine",
+        "piston",
+        "crankshaft",
+        "carburetor",
+        "camshaft",
+        "spark_plug",
+        "turbocharger",
+        "RPM"
+      ],
+      "relations": [
+        {
+          "subject": "camshaft",
+          "predicate": "produces",
+          "object": "crankshaft"
+        },
+        {
+          "subject": "crankshaft",
+          "predicate": "regulates",
+          "object": "camshaft"
+        },
+        {
+          "subject": "turbocharger",
+          "predicate": "produces",
+          "object": "carburetor"
+        },
+        {
+          "subject": "carburetor",
+          "predicate": "transforms",
+          "object": "turbocharger"
+        },
+        {
+          "subject": "piston",
+          "predicate": "produces",
+          "object": "carburetor"
+        },
+        {
+          "subject": "camshaft",
+          "predicate": "produces",
+          "object": "carburetor"
+        },
+        {
+          "subject": "camshaft",
+          "predicate": "produces",
+          "object": "turbocharger"
+        },
+        {
+          "subject": "piston",
+          "predicate": "produces",
+          "object": "turbocharger"
+        },
+        {
+          "subject": "piston",
+          "predicate": "produces",
+          "object": "engine"
+        },
+        {
+          "subject": "crankshaft",
+          "predicate": "regulates",
+          "object": "RPM"
+        },
+        {
+          "subject": "carburetor",
+          "predicate": "produces",
+          "object": "engine"
+        },
+        {
+          "subject": "engine",
+          "predicate": "produces",
+          "object": "carburetor"
+        },
+        {
+          "subject": "crankshaft",
+          "predicate": "produces",
+          "object": "turbocharger"
+        },
+        {
+          "subject": "spark_plug",
+          "predicate": "regulates",
+          "object": "carburetor"
+        },
+        {
+          "subject": "crankshaft",
+          "predicate": "produces",
+          "object": "carburetor"
+        }
+      ]
+    },
+    {
+      "name": "Legal Precedent Concepts",
+      "description": "Auto-discovered domain with 6 concepts",
+      "entities": [
+        "nebula",
+        "precedent",
+        "verdict",
+        "injunction",
+        "habeas_corpus",
+        "subpoena"
+      ],
+      "relations": [
+        {
+          "subject": "habeas_corpus",
+          "predicate": "requires",
+          "object": "subpoena"
+        },
+        {
+          "subject": "subpoena",
+          "predicate": "prevents",
+          "object": "injunction"
+        },
+        {
+          "subject": "injunction",
+          "predicate": "requires",
+          "object": "subpoena"
+        },
+        {
+          "subject": "verdict",
+          "predicate": "prevents",
+          "object": "injunction"
+        },
+        {
+          "subject": "habeas_corpus",
+          "predicate": "prevents",
+          "object": "injunction"
+        },
+        {
+          "subject": "precedent",
+          "predicate": "prevents",
+          "object": "injunction"
+        },
+        {
+          "subject": "precedent",
+          "predicate": "transforms",
+          "object": "verdict"
+        },
+        {
+          "subject": "injunction",
+          "predicate": "transforms",
+          "object": "verdict"
+        },
+        {
+          "subject": "verdict",
+          "predicate": "requires",
+          "object": "subpoena"
+        },
+        {
+          "subject": "precedent",
+          "predicate": "requires",
+          "object": "subpoena"
+        },
+        {
+          "subject": "habeas_corpus",
+          "predicate": "supports",
+          "object": "precedent"
+        },
+        {
+          "subject": "habeas_corpus",
+          "predicate": "depends_on",
+          "object": "verdict"
+        },
+        {
+          "subject": "nebula",
+          "predicate": "requires",
+          "object": "subpoena"
+        },
+        {
+          "subject": "verdict",
+          "predicate": "regulates",
+          "object": "precedent"
+        },
+        {
+          "subject": "subpoena",
+          "predicate": "transforms",
+          "object": "verdict"
+        }
+      ]
+    },
+    {
+      "name": "Cellular Biology",
+      "description": "Auto-discovered domain with 15 concepts",
+      "entities": [
+        "mitochondria",
+        "enzyme",
+        "membrane",
+        "DNA",
+        "protein",
+        "antibody",
+        "virus",
+        "ribosome",
+        "chromosome",
+        "nucleus",
+        "cytoplasm",
+        "hemoglobin",
+        "pathogen",
+        "stem_cell",
+        "apoptosis"
+      ],
+      "relations": [
+        {
+          "subject": "protein",
+          "predicate": "transforms",
+          "object": "enzyme"
+        },
+        {
+          "subject": "enzyme",
+          "predicate": "produces",
+          "object": "ribosome"
+        },
+        {
+          "subject": "ribosome",
+          "predicate": "transforms",
+          "object": "enzyme"
+        },
+        {
+          "subject": "chromosome",
+          "predicate": "produces",
+          "object": "ribosome"
+        },
+        {
+          "subject": "mitochondria",
+          "predicate": "produces",
+          "object": "ribosome"
+        },
+        {
+          "subject": "cytoplasm",
+          "predicate": "regulates",
+          "object": "nucleus"
+        },
+        {
+          "subject": "DNA",
+          "predicate": "contains",
+          "object": "chromosome"
+        },
+        {
+          "subject": "antibody",
+          "predicate": "transforms",
+          "object": "enzyme"
+        },
+        {
+          "subject": "pathogen",
+          "predicate": "transforms",
+          "object": "virus"
+        },
+        {
+          "subject": "protein",
+          "predicate": "produces",
+          "object": "ribosome"
+        },
+        {
+          "subject": "cytoplasm",
+          "predicate": "produces",
+          "object": "ribosome"
+        },
+        {
+          "subject": "ribosome",
+          "predicate": "contains",
+          "object": "chromosome"
+        },
+        {
+          "subject": "antibody",
+          "predicate": "produces",
+          "object": "ribosome"
+        },
+        {
+          "subject": "chromosome",
+          "predicate": "transforms",
+          "object": "enzyme"
+        },
+        {
+          "subject": "cytoplasm",
+          "predicate": "transforms",
+          "object": "mitochondria"
+        }
+      ]
+    },
+    {
+      "name": "Construction and Engineering",
+      "description": "Auto-discovered domain with 6 concepts",
+      "entities": [
+        "horsepower",
+        "flywheel",
+        "foundation",
+        "ventilation",
+        "scaffolding",
+        "gravity"
+      ],
+      "relations": [
+        {
+          "subject": "ventilation",
+          "predicate": "supports",
+          "object": "scaffolding"
+        },
+        {
+          "subject": "foundation",
+          "predicate": "supports",
+          "object": "scaffolding"
+        },
+        {
+          "subject": "flywheel",
+          "predicate": "supports",
+          "object": "scaffolding"
+        },
+        {
+          "subject": "horsepower",
+          "predicate": "supports",
+          "object": "scaffolding"
+        },
+        {
+          "subject": "flywheel",
+          "predicate": "produces",
+          "object": "horsepower"
+        },
+        {
+          "subject": "scaffolding",
+          "predicate": "regulates",
+          "object": "ventilation"
+        },
+        {
+          "subject": "horsepower",
+          "predicate": "produces",
+          "object": "flywheel"
+        },
+        {
+          "subject": "gravity",
+          "predicate": "supports",
+          "object": "scaffolding"
+        },
+        {
+          "subject": "flywheel",
+          "predicate": "regulates",
+          "object": "ventilation"
+        },
+        {
+          "subject": "horsepower",
+          "predicate": "regulates",
+          "object": "ventilation"
+        },
+        {
+          "subject": "ventilation",
+          "predicate": "produces",
+          "object": "flywheel"
+        },
+        {
+          "subject": "ventilation",
+          "predicate": "produces",
+          "object": "horsepower"
+        },
+        {
+          "subject": "gravity",
+          "predicate": "produces",
+          "object": "flywheel"
+        },
+        {
+          "subject": "scaffolding",
+          "predicate": "produces",
+          "object": "flywheel"
+        },
+        {
+          "subject": "gravity",
+          "predicate": "produces",
+          "object": "horsepower"
+        }
+      ]
+    },
+    {
+      "name": "Acoustics and Sound",
+      "description": "Auto-discovered domain with 5 concepts",
+      "entities": [
+        "octave",
+        "timbre",
+        "overtone",
+        "polyrhythm",
+        "umami"
+      ],
+      "relations": [
+        {
+          "subject": "timbre",
+          "predicate": "transforms",
+          "object": "overtone"
+        },
+        {
+          "subject": "octave",
+          "predicate": "transforms",
+          "object": "overtone"
+        },
+        {
+          "subject": "overtone",
+          "predicate": "transforms",
+          "object": "octave"
+        },
+        {
+          "subject": "overtone",
+          "predicate": "transforms",
+          "object": "timbre"
+        },
+        {
+          "subject": "timbre",
+          "predicate": "transforms",
+          "object": "octave"
+        },
+        {
+          "subject": "polyrhythm",
+          "predicate": "transforms",
+          "object": "overtone"
+        },
+        {
+          "subject": "umami",
+          "predicate": "transforms",
+          "object": "overtone"
+        },
+        {
+          "subject": "octave",
+          "predicate": "transforms",
+          "object": "timbre"
+        },
+        {
+          "subject": "timbre",
+          "predicate": "transforms",
+          "object": "umami"
+        },
+        {
+          "subject": "umami",
+          "predicate": "transforms",
+          "object": "timbre"
+        },
+        {
+          "subject": "polyrhythm",
+          "predicate": "transforms",
+          "object": "octave"
+        },
+        {
+          "subject": "overtone",
+          "predicate": "transforms",
+          "object": "umami"
+        },
+        {
+          "subject": "overtone",
+          "predicate": "competes_with",
+          "object": "polyrhythm"
+        },
+        {
+          "subject": "timbre",
+          "predicate": "competes_with",
+          "object": "polyrhythm"
+        },
+        {
+          "subject": "polyrhythm",
+          "predicate": "transforms",
+          "object": "timbre"
+        }
+      ]
+    },
+    {
+      "name": "Chemical Laboratory",
+      "description": "Auto-discovered domain with 5 concepts",
+      "entities": [
+        "receptor",
+        "acid",
+        "solvent",
+        "reagent",
+        "gluten"
+      ],
+      "relations": [
+        {
+          "subject": "solvent",
+          "predicate": "regulates",
+          "object": "reagent"
+        },
+        {
+          "subject": "receptor",
+          "predicate": "produces",
+          "object": "reagent"
+        },
+        {
+          "subject": "reagent",
+          "predicate": "produces",
+          "object": "solvent"
+        },
+        {
+          "subject": "acid",
+          "predicate": "regulates",
+          "object": "reagent"
+        },
+        {
+          "subject": "gluten",
+          "predicate": "requires",
+          "object": "reagent"
+        },
+        {
+          "subject": "reagent",
+          "predicate": "regulates",
+          "object": "receptor"
+        },
+        {
+          "subject": "receptor",
+          "predicate": "produces",
+          "object": "solvent"
+        },
+        {
+          "subject": "acid",
+          "predicate": "produces",
+          "object": "solvent"
+        },
+        {
+          "subject": "gluten",
+          "predicate": "produces",
+          "object": "solvent"
+        },
+        {
+          "subject": "solvent",
+          "predicate": "produces",
+          "object": "gluten"
+        },
+        {
+          "subject": "solvent",
+          "predicate": "regulates",
+          "object": "receptor"
+        },
+        {
+          "subject": "receptor",
+          "predicate": "produces",
+          "object": "gluten"
+        },
+        {
+          "subject": "reagent",
+          "predicate": "produces",
+          "object": "gluten"
+        },
+        {
+          "subject": "acid",
+          "predicate": "produces",
+          "object": "gluten"
+        },
+        {
+          "subject": "gluten",
+          "predicate": "regulates",
+          "object": "receptor"
+        }
+      ]
+    },
+    {
+      "name": "Building Construction Principles",
+      "description": "Auto-discovered domain with 7 concepts",
+      "entities": [
+        "suspension",
+        "concrete",
+        "insulation",
+        "load_bearing",
+        "structural_integrity",
+        "building_code",
+        "masonry"
+      ],
+      "relations": [
+        {
+          "subject": "insulation",
+          "predicate": "supports",
+          "object": "structural_integrity"
+        },
+        {
+          "subject": "building_code",
+          "predicate": "supports",
+          "object": "structural_integrity"
+        },
+        {
+          "subject": "masonry",
+          "predicate": "supports",
+          "object": "structural_integrity"
+        },
+        {
+          "subject": "load_bearing",
+          "predicate": "supports",
+          "object": "structural_integrity"
+        },
+        {
+          "subject": "structural_integrity",
+          "predicate": "regulates",
+          "object": "building_code"
+        },
+        {
+          "subject": "concrete",
+          "predicate": "destroys",
+          "object": "masonry"
+        },
+        {
+          "subject": "concrete",
+          "predicate": "supports",
+          "object": "structural_integrity"
+        },
+        {
+          "subject": "suspension",
+          "predicate": "supports",
+          "object": "structural_integrity"
+        },
+        {
+          "subject": "masonry",
+          "predicate": "produces",
+          "object": "concrete"
+        },
+        {
+          "subject": "load_bearing",
+          "predicate": "produces",
+          "object": "masonry"
+        },
+        {
+          "subject": "structural_integrity",
+          "predicate": "produces",
+          "object": "masonry"
+        },
+        {
+          "subject": "insulation",
+          "predicate": "destroys",
+          "object": "masonry"
+        },
+        {
+          "subject": "masonry",
+          "predicate": "regulates",
+          "object": "building_code"
+        },
+        {
+          "subject": "structural_integrity",
+          "predicate": "produces",
+          "object": "insulation"
+        },
+        {
+          "subject": "insulation",
+          "predicate": "regulates",
+          "object": "building_code"
+        }
+      ]
+    },
+    {
+      "name": "Environmental Processes",
+      "description": "Auto-discovered domain with 11 concepts",
+      "entities": [
+        "distillation",
+        "precipitation",
+        "extinction",
+        "carrying_capacity",
+        "pollination",
+        "deforestation",
+        "succession",
+        "excavation",
+        "marination",
+        "poaching",
+        "deposition"
+      ],
+      "relations": [
+        {
+          "subject": "deposition",
+          "predicate": "produces",
+          "object": "precipitation"
+        },
+        {
+          "subject": "excavation",
+          "predicate": "produces",
+          "object": "distillation"
+        },
+        {
+          "subject": "distillation",
+          "predicate": "regulates",
+          "object": "precipitation"
+        },
+        {
+          "subject": "precipitation",
+          "predicate": "produces",
+          "object": "distillation"
+        },
+        {
+          "subject": "deforestation",
+          "predicate": "produces",
+          "object": "precipitation"
+        },
+        {
+          "subject": "extinction",
+          "predicate": "produces",
+          "object": "precipitation"
+        },
+        {
+          "subject": "pollination",
+          "predicate": "produces",
+          "object": "precipitation"
+        },
+        {
+          "subject": "excavation",
+          "predicate": "produces",
+          "object": "precipitation"
+        },
+        {
+          "subject": "carrying_capacity",
+          "predicate": "destroys",
+          "object": "extinction"
+        },
+        {
+          "subject": "marination",
+          "predicate": "produces",
+          "object": "distillation"
+        },
+        {
+          "subject": "deposition",
+          "predicate": "produces",
+          "object": "distillation"
+        },
+        {
+          "subject": "pollination",
+          "predicate": "produces",
+          "object": "distillation"
+        },
+        {
+          "subject": "pollination",
+          "predicate": "destroys",
+          "object": "extinction"
+        },
+        {
+          "subject": "extinction",
+          "predicate": "produces",
+          "object": "pollination"
+        },
+        {
+          "subject": "distillation",
+          "predicate": "destroys",
+          "object": "excavation"
+        }
+      ]
+    },
+    {
+      "name": "Chemical Kinetics",
+      "description": "Auto-discovered domain with 8 concepts",
+      "entities": [
+        "differential",
+        "reaction",
+        "valence",
+        "equilibrium",
+        "migration",
+        "scale",
+        "dynamics",
+        "redshift"
+      ],
+      "relations": [
+        {
+          "subject": "equilibrium",
+          "predicate": "transforms",
+          "object": "dynamics"
+        },
+        {
+          "subject": "redshift",
+          "predicate": "regulates",
+          "object": "dynamics"
+        },
+        {
+          "subject": "migration",
+          "predicate": "transforms",
+          "object": "dynamics"
+        },
+        {
+          "subject": "reaction",
+          "predicate": "transforms",
+          "object": "dynamics"
+        },
+        {
+          "subject": "scale",
+          "predicate": "transforms",
+          "object": "dynamics"
+        },
+        {
+          "subject": "valence",
+          "predicate": "transforms",
+          "object": "dynamics"
+        },
+        {
+          "subject": "dynamics",
+          "predicate": "regulates",
+          "object": "equilibrium"
+        },
+        {
+          "subject": "valence",
+          "predicate": "regulates",
+          "object": "equilibrium"
+        },
+        {
+          "subject": "differential",
+          "predicate": "transforms",
+          "object": "dynamics"
+        },
+        {
+          "subject": "dynamics",
+          "predicate": "regulates",
+          "object": "migration"
+        },
+        {
+          "subject": "equilibrium",
+          "predicate": "transforms",
+          "object": "valence"
+        },
+        {
+          "subject": "redshift",
+          "predicate": "regulates",
+          "object": "migration"
+        },
+        {
+          "subject": "redshift",
+          "predicate": "regulates",
+          "object": "equilibrium"
+        },
+        {
+          "subject": "valence",
+          "predicate": "creates",
+          "object": "scale"
+        },
+        {
+          "subject": "equilibrium",
+          "predicate": "regulates",
+          "object": "migration"
+        }
+      ]
+    },
+    {
+      "name": "Computer Systems and Networking",
+      "description": "Auto-discovered domain with 11 concepts",
+      "entities": [
+        "CPU",
+        "compiler",
+        "thread",
+        "cache",
+        "server",
+        "API",
+        "firewall",
+        "hash_table",
+        "load_balancer",
+        "container",
+        "socket"
+      ],
+      "relations": [
+        {
+          "subject": "load_balancer",
+          "predicate": "regulates",
+          "object": "firewall"
+        },
+        {
+          "subject": "server",
+          "predicate": "regulates",
+          "object": "firewall"
+        },
+        {
+          "subject": "firewall",
+          "predicate": "enables",
+          "object": "load_balancer"
+        },
+        {
+          "subject": "CPU",
+          "predicate": "enables",
+          "object": "compiler"
+        },
+        {
+          "subject": "compiler",
+          "predicate": "regulates",
+          "object": "firewall"
+        },
+        {
+          "subject": "server",
+          "predicate": "contains",
+          "object": "container"
+        },
+        {
+          "subject": "API",
+          "predicate": "transforms",
+          "object": "CPU"
+        },
+        {
+          "subject": "API",
+          "predicate": "regulates",
+          "object": "firewall"
+        },
+        {
+          "subject": "compiler",
+          "predicate": "regulates",
+          "object": "CPU"
+        },
+        {
+          "subject": "server",
+          "predicate": "transforms",
+          "object": "load_balancer"
+        },
+        {
+          "subject": "socket",
+          "predicate": "regulates",
+          "object": "firewall"
+        },
+        {
+          "subject": "load_balancer",
+          "predicate": "requires",
+          "object": "compiler"
+        },
+        {
+          "subject": "hash_table",
+          "predicate": "enables",
+          "object": "compiler"
+        },
+        {
+          "subject": "server",
+          "predicate": "requires",
+          "object": "compiler"
+        },
+        {
+          "subject": "firewall",
+          "predicate": "enables",
+          "object": "compiler"
+        }
+      ]
+    },
+    {
+      "name": "Music Theory",
+      "description": "Auto-discovered domain with 5 concepts",
+      "entities": [
+        "bond",
+        "chord",
+        "pitch",
+        "cadence",
+        "roof_pitch"
+      ],
+      "relations": [
+        {
+          "subject": "pitch",
+          "predicate": "transforms",
+          "object": "roof_pitch"
+        },
+        {
+          "subject": "roof_pitch",
+          "predicate": "transforms",
+          "object": "pitch"
+        },
+        {
+          "subject": "roof_pitch",
+          "predicate": "regulates",
+          "object": "cadence"
+        },
+        {
+          "subject": "pitch",
+          "predicate": "regulates",
+          "object": "cadence"
+        },
+        {
+          "subject": "cadence",
+          "predicate": "transforms",
+          "object": "roof_pitch"
+        },
+        {
+          "subject": "chord",
+          "predicate": "regulates",
+          "object": "cadence"
+        },
+        {
+          "subject": "bond",
+          "predicate": "regulates",
+          "object": "cadence"
+        },
+        {
+          "subject": "chord",
+          "predicate": "transforms",
+          "object": "roof_pitch"
+        },
+        {
+          "subject": "cadence",
+          "predicate": "transforms",
+          "object": "pitch"
+        },
+        {
+          "subject": "bond",
+          "predicate": "transforms",
+          "object": "roof_pitch"
+        },
+        {
+          "subject": "chord",
+          "predicate": "transforms",
+          "object": "pitch"
+        },
+        {
+          "subject": "bond",
+          "predicate": "transforms",
+          "object": "pitch"
+        },
+        {
+          "subject": "chord",
+          "predicate": "regulates",
+          "object": "bond"
+        },
+        {
+          "subject": "bond",
+          "predicate": "transforms",
+          "object": "chord"
+        },
+        {
+          "subject": "cadence",
+          "predicate": "contains",
+          "object": "chord"
+        }
+      ]
+    },
+    {
+      "name": "Construction Materials",
+      "description": "Auto-discovered domain with 8 concepts",
+      "entities": [
+        "alloy",
+        "steel",
+        "truss",
+        "cantilever",
+        "buttress",
+        "rebar",
+        "drywall",
+        "dough"
+      ],
+      "relations": [
+        {
+          "subject": "truss",
+          "predicate": "produces",
+          "object": "cantilever"
+        },
+        {
+          "subject": "truss",
+          "predicate": "supports",
+          "object": "buttress"
+        },
+        {
+          "subject": "cantilever",
+          "predicate": "supports",
+          "object": "buttress"
+        },
+        {
+          "subject": "buttress",
+          "predicate": "produces",
+          "object": "cantilever"
+        },
+        {
+          "subject": "steel",
+          "predicate": "produces",
+          "object": "alloy"
+        },
+        {
+          "subject": "cantilever",
+          "predicate": "supports",
+          "object": "truss"
+        },
+        {
+          "subject": "steel",
+          "predicate": "supports",
+          "object": "cantilever"
+        },
+        {
+          "subject": "alloy",
+          "predicate": "produces",
+          "object": "steel"
+        },
+        {
+          "subject": "buttress",
+          "predicate": "produces",
+          "object": "truss"
+        },
+        {
+          "subject": "cantilever",
+          "predicate": "produces",
+          "object": "steel"
+        },
+        {
+          "subject": "rebar",
+          "predicate": "produces",
+          "object": "steel"
+        },
+        {
+          "subject": "drywall",
+          "predicate": "supports",
+          "object": "cantilever"
+        },
+        {
+          "subject": "cantilever",
+          "predicate": "produces",
+          "object": "alloy"
+        },
+        {
+          "subject": "rebar",
+          "predicate": "supports",
+          "object": "buttress"
+        },
+        {
+          "subject": "rebar",
+          "predicate": "produces",
+          "object": "cantilever"
+        }
+      ]
+    },
+    {
+      "name": "Chemical Properties",
+      "description": "Auto-discovered domain with 8 concepts",
+      "entities": [
+        "synapse",
+        "molecule",
+        "polymer",
+        "crystal",
+        "isotope",
+        "pH",
+        "molar_mass",
+        "compound"
+      ],
+      "relations": [
+        {
+          "subject": "molar_mass",
+          "predicate": "produces",
+          "object": "molecule"
+        },
+        {
+          "subject": "isotope",
+          "predicate": "produces",
+          "object": "molecule"
+        },
+        {
+          "subject": "polymer",
+          "predicate": "contains",
+          "object": "molecule"
+        },
+        {
+          "subject": "synapse",
+          "predicate": "contains",
+          "object": "molecule"
+        },
+        {
+          "subject": "molecule",
+          "predicate": "transforms",
+          "object": "synapse"
+        },
+        {
+          "subject": "compound",
+          "predicate": "produces",
+          "object": "molecule"
+        },
+        {
+          "subject": "molecule",
+          "predicate": "produces",
+          "object": "isotope"
+        },
+        {
+          "subject": "molecule",
+          "predicate": "transforms",
+          "object": "molar_mass"
+        },
+        {
+          "subject": "isotope",
+          "predicate": "transforms",
+          "object": "synapse"
+        },
+        {
+          "subject": "crystal",
+          "predicate": "contains",
+          "object": "molecule"
+        },
+        {
+          "subject": "molar_mass",
+          "predicate": "produces",
+          "object": "isotope"
+        },
+        {
+          "subject": "isotope",
+          "predicate": "transforms",
+          "object": "molar_mass"
+        },
+        {
+          "subject": "molar_mass",
+          "predicate": "interacts_with",
+          "object": "synapse"
+        },
+        {
+          "subject": "pH",
+          "predicate": "produces",
+          "object": "molecule"
+        },
+        {
+          "subject": "polymer",
+          "predicate": "transforms",
+          "object": "synapse"
+        }
+      ]
+    },
+    {
+      "name": "Astronomical Objects and Systems",
+      "description": "Auto-discovered domain with 7 concepts",
+      "entities": [
+        "atom",
+        "electron",
+        "star",
+        "planet",
+        "asteroid",
+        "comet",
+        "exoplanet"
+      ],
+      "relations": [
+        {
+          "subject": "planet",
+          "predicate": "transforms",
+          "object": "exoplanet"
+        },
+        {
+          "subject": "asteroid",
+          "predicate": "transforms",
+          "object": "exoplanet"
+        },
+        {
+          "subject": "exoplanet",
+          "predicate": "regulates",
+          "object": "planet"
+        },
+        {
+          "subject": "planet",
+          "predicate": "destroys",
+          "object": "asteroid"
+        },
+        {
+          "subject": "comet",
+          "predicate": "destroys",
+          "object": "asteroid"
+        },
+        {
+          "subject": "exoplanet",
+          "predicate": "destroys",
+          "object": "asteroid"
+        },
+        {
+          "subject": "comet",
+          "predicate": "transforms",
+          "object": "exoplanet"
+        },
+        {
+          "subject": "atom",
+          "predicate": "transforms",
+          "object": "exoplanet"
+        },
+        {
+          "subject": "atom",
+          "predicate": "destroys",
+          "object": "asteroid"
+        },
+        {
+          "subject": "electron",
+          "predicate": "contains",
+          "object": "atom"
+        },
+        {
+          "subject": "electron",
+          "predicate": "transforms",
+          "object": "exoplanet"
+        },
+        {
+          "subject": "asteroid",
+          "predicate": "transforms",
+          "object": "comet"
+        },
+        {
+          "subject": "atom",
+          "predicate": "produces",
+          "object": "electron"
+        },
+        {
+          "subject": "star",
+          "predicate": "transforms",
+          "object": "exoplanet"
+        },
+        {
+          "subject": "planet",
+          "predicate": "transforms",
+          "object": "comet"
+        }
+      ]
+    },
+    {
+      "name": "Trade and Regulation",
+      "description": "Auto-discovered domain with 4 concepts",
+      "entities": [
+        "tax",
+        "tariff",
+        "arch",
+        "tort"
+      ],
+      "relations": [
+        {
+          "subject": "tariff",
+          "predicate": "regulates",
+          "object": "tax"
+        },
+        {
+          "subject": "tort",
+          "predicate": "regulates",
+          "object": "tax"
+        },
+        {
+          "subject": "arch",
+          "predicate": "regulates",
+          "object": "tax"
+        },
+        {
+          "subject": "tax",
+          "predicate": "regulates",
+          "object": "tariff"
+        },
+        {
+          "subject": "tort",
+          "predicate": "regulates",
+          "object": "tariff"
+        },
+        {
+          "subject": "tax",
+          "predicate": "regulates",
+          "object": "tort"
+        },
+        {
+          "subject": "tariff",
+          "predicate": "regulates",
+          "object": "tort"
+        },
+        {
+          "subject": "arch",
+          "predicate": "regulates",
+          "object": "tort"
+        },
+        {
+          "subject": "arch",
+          "predicate": "regulates",
+          "object": "tariff"
+        }
+      ]
+    },
+    {
+      "name": "Astrophysics",
+      "description": "Auto-discovered domain with 7 concepts",
+      "entities": [
+        "interrupt",
+        "deadlock",
+        "arbitrage",
+        "dividend",
+        "column",
+        "orbit",
+        "pulsar"
+      ],
+      "relations": [
+        {
+          "subject": "interrupt",
+          "predicate": "regulates",
+          "object": "deadlock"
+        },
+        {
+          "subject": "deadlock",
+          "predicate": "enables",
+          "object": "interrupt"
+        },
+        {
+          "subject": "pulsar",
+          "predicate": "prevents",
+          "object": "deadlock"
+        },
+        {
+          "subject": "arbitrage",
+          "predicate": "regulates",
+          "object": "dividend"
+        },
+        {
+          "subject": "orbit",
+          "predicate": "transforms",
+          "object": "pulsar"
+        },
+        {
+          "subject": "dividend",
+          "predicate": "prevents",
+          "object": "deadlock"
+        },
+        {
+          "subject": "orbit",
+          "predicate": "enables",
+          "object": "interrupt"
+        },
+        {
+          "subject": "arbitrage",
+          "predicate": "prevents",
+          "object": "deadlock"
+        },
+        {
+          "subject": "orbit",
+          "predicate": "prevents",
+          "object": "deadlock"
+        },
+        {
+          "subject": "pulsar",
+          "predicate": "regulates",
+          "object": "dividend"
+        },
+        {
+          "subject": "deadlock",
+          "predicate": "regulates",
+          "object": "dividend"
+        },
+        {
+          "subject": "dividend",
+          "predicate": "regulates",
+          "object": "arbitrage"
+        },
+        {
+          "subject": "column",
+          "predicate": "regulates",
+          "object": "dividend"
+        },
+        {
+          "subject": "orbit",
+          "predicate": "regulates",
+          "object": "dividend"
+        },
+        {
+          "subject": "deadlock",
+          "predicate": "transforms",
+          "object": "pulsar"
+        }
+      ]
+    },
+    {
+      "name": "Automotive Engineering",
+      "description": "Auto-discovered domain with 12 concepts",
+      "entities": [
+        "fuel",
+        "wheel",
+        "brake",
+        "friction",
+        "torque",
+        "exhaust",
+        "gear",
+        "axle",
+        "cylinder",
+        "throttle",
+        "drivetrain",
+        "beam"
+      ],
+      "relations": [
+        {
+          "subject": "torque",
+          "predicate": "regulates",
+          "object": "throttle"
+        },
+        {
+          "subject": "axle",
+          "predicate": "regulates",
+          "object": "throttle"
+        },
+        {
+          "subject": "axle",
+          "predicate": "produces",
+          "object": "drivetrain"
+        },
+        {
+          "subject": "gear",
+          "predicate": "produces",
+          "object": "drivetrain"
+        },
+        {
+          "subject": "brake",
+          "predicate": "regulates",
+          "object": "throttle"
+        },
+        {
+          "subject": "drivetrain",
+          "predicate": "regulates",
+          "object": "throttle"
+        },
+        {
+          "subject": "gear",
+          "predicate": "regulates",
+          "object": "throttle"
+        },
+        {
+          "subject": "throttle",
+          "predicate": "transforms",
+          "object": "torque"
+        },
+        {
+          "subject": "axle",
+          "predicate": "transforms",
+          "object": "cylinder"
+        },
+        {
+          "subject": "cylinder",
+          "predicate": "regulates",
+          "object": "throttle"
+        },
+        {
+          "subject": "axle",
+          "predicate": "transforms",
+          "object": "torque"
+        },
+        {
+          "subject": "friction",
+          "predicate": "transforms",
+          "object": "torque"
+        },
+        {
+          "subject": "drivetrain",
+          "predicate": "regulates",
+          "object": "axle"
+        },
+        {
+          "subject": "friction",
+          "predicate": "regulates",
+          "object": "throttle"
+        },
+        {
+          "subject": "fuel",
+          "predicate": "regulates",
+          "object": "throttle"
+        }
+      ]
+    }
+  ]
+}

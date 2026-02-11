@@ -36,42 +36,80 @@ from sklearn.metrics.pairwise import cosine_similarity
 # concepts it considers related (same domain) vs. distant.
 
 DEFAULT_CONCEPTS = [
-    # Physical / mechanical
+    # Physical / mechanical (25)
     "engine", "fuel", "combustion", "wheel", "brake", "transmission",
     "friction", "torque", "exhaust", "piston", "gear", "axle",
-    # Biology
+    "crankshaft", "cylinder", "horsepower", "carburetor", "throttle",
+    "flywheel", "camshaft", "spark_plug", "drivetrain", "suspension",
+    "differential", "turbocharger", "RPM",
+    # Biology / cell biology (25)
     "cell", "mitochondria", "glucose", "enzyme", "membrane", "DNA",
     "protein", "metabolism", "neuron", "antibody", "virus", "organ",
-    # Computing
-    "CPU", "memory", "algorithm", "database", "network", "compiler",
+    "ribosome", "chromosome", "nucleus", "cytoplasm", "hemoglobin",
+    "synapse", "hormone", "receptor", "pathogen", "immune_response",
+    "gene_expression", "stem_cell", "apoptosis",
+    # Computing / software (25)
+    "CPU", "algorithm", "database", "network", "compiler",
     "thread", "cache", "bandwidth", "server", "encryption", "API",
-    # Economics
+    "operating_system", "firewall", "latency", "throughput",
+    "virtualization", "recursion", "binary_tree", "hash_table",
+    "load_balancer", "microservice", "container", "socket",
+    "interrupt", "deadlock",
+    # Economics (25)
     "inflation", "GDP", "market", "trade", "currency", "debt",
     "supply", "demand", "monopoly", "recession", "investment", "tax",
-    # Chemistry
+    "interest_rate", "fiscal_policy", "monetary_policy", "subsidy",
+    "tariff", "commodity", "stock_exchange", "bond_market",
+    "depreciation", "liquidity", "arbitrage", "dividend", "central_bank",
+    # Chemistry (25)
     "molecule", "atom", "reaction", "catalyst", "bond", "electron",
     "oxidation", "acid", "solvent", "polymer", "crystal", "isotope",
-    # Ecology
+    "valence", "covalent_bond", "ionic_bond", "pH", "titration",
+    "electrolysis", "distillation", "precipitation", "equilibrium",
+    "molar_mass", "reagent", "compound", "alloy",
+    # Ecology (25)
     "ecosystem", "predator", "prey", "habitat", "photosynthesis", "extinction",
     "biodiversity", "food_chain", "decomposer", "symbiosis", "migration", "adaptation",
-    # Music
+    "carrying_capacity", "trophic_level", "nitrogen_cycle", "carbon_cycle",
+    "keystone_species", "invasive_species", "pollination", "biome",
+    "deforestation", "coral_reef", "wetland", "succession", "mutualism",
+    # Music (25)
     "melody", "harmony", "rhythm", "chord", "tempo", "pitch",
     "scale", "octave", "resonance", "timbre", "crescendo", "syncopation",
-    # Architecture
+    "counterpoint", "modulation", "cadence", "arpeggio", "staccato",
+    "legato", "vibrato", "overtone", "dissonance", "consonance",
+    "fermata", "polyrhythm", "dynamics",
+    # Architecture / construction (25)
     "foundation", "beam", "column", "arch", "concrete", "steel",
-    "blueprint", "facade", "insulation", "ventilation", "load", "truss",
-    # Psychology
-    "cognition", "emotion", "memory_psychology", "perception", "motivation", "anxiety",
+    "blueprint", "facade", "insulation", "ventilation", "truss",
+    "cantilever", "buttress", "lintel", "rebar", "mortar",
+    "load_bearing", "floor_plan", "roof_pitch", "structural_integrity",
+    "building_code", "excavation", "scaffolding", "drywall", "masonry",
+    # Psychology (25)
+    "cognition", "emotion", "perception", "motivation", "anxiety",
     "behavior", "conditioning", "attention", "consciousness", "trauma", "empathy",
-    # Cooking
+    "reinforcement", "cognitive_bias", "working_memory", "long_term_memory",
+    "attachment_theory", "introspection", "habituation", "neuroplasticity",
+    "psychotherapy", "dopamine", "serotonin", "phobia", "resilience",
+    "cognitive_dissonance",
+    # Cooking / food science (25)
     "fermentation", "caramelization", "emulsion", "seasoning", "simmering", "marination",
-    "dough", "broth", "reduction_cooking", "blanching", "braising", "tempering",
-    # Astronomy
+    "dough", "broth", "blanching", "braising", "tempering",
+    "maillard_reaction", "deglaze", "roux", "brine", "poaching",
+    "sous_vide", "smoking", "curing", "leavening", "gluten",
+    "umami", "julienne", "flambe", "reduction_sauce",
+    # Astronomy (25)
     "star", "planet", "orbit", "gravity", "nebula", "galaxy",
     "black_hole", "supernova", "asteroid", "comet", "pulsar", "quasar",
-    # Law
+    "red_dwarf", "white_dwarf", "neutron_star", "solar_wind",
+    "light_year", "redshift", "dark_matter", "dark_energy",
+    "exoplanet", "accretion_disk", "cosmic_radiation", "magnetar", "protostar",
+    # Law (25)
     "statute", "precedent", "jurisdiction", "liability", "contract", "tort",
     "prosecution", "verdict", "appeal", "arbitration", "injunction", "compliance",
+    "due_process", "habeas_corpus", "indictment", "subpoena", "deposition",
+    "plaintiff", "defendant", "litigation", "mediation", "felony",
+    "misdemeanor", "jurisprudence", "fiduciary",
 ]
 
 # Predicates to probe relational structure
@@ -134,6 +172,75 @@ class SentenceTransformerProber(ModelProber):
         obj_vec = self.embed_concept(obj)
         pred_vec = self.model.encode(predicate.replace("_", " "), normalize_embeddings=True)
         # Relation score: how close is (subj + pred) to obj?
+        predicted = subj_vec + pred_vec
+        predicted = predicted / np.linalg.norm(predicted)
+        return float(np.dot(predicted, obj_vec))
+
+
+class E5MistralProber(ModelProber):
+    """Probe using intfloat/e5-mistral-7b-instruct (4096-dim, ~14GB RAM).
+
+    This is a 7B-parameter embedding model built on Mistral-7B, specifically
+    trained for high-quality text embeddings. Much richer representations than
+    the 384-dim MiniLM but needs more RAM and is slower.
+    """
+
+    def __init__(self, model_name: str = "intfloat/e5-mistral-7b-instruct"):
+        import torch
+        from sentence_transformers import SentenceTransformer
+
+        print(f"Loading E5-Mistral-7B embedding model...")
+        print(f"  This needs ~14GB RAM. Loading in float16 for efficiency...")
+
+        self.model = SentenceTransformer(model_name,
+                                          model_kwargs={"torch_dtype": torch.float16})
+        self._cache = {}
+        dim = self.model.get_sentence_embedding_dimension()
+        print(f"  Ready. Embedding dimension: {dim}\n")
+
+    def _instruct_text(self, text: str, task: str = "clustering") -> str:
+        """E5-Mistral uses instruction-prefixed queries for best results."""
+        if task == "clustering":
+            return f"Instruct: Identify the knowledge domain of this concept.\nQuery: {text}"
+        elif task == "relation":
+            return f"Instruct: Determine the semantic relationship.\nQuery: {text}"
+        return text
+
+    def embed_concept(self, concept: str) -> np.ndarray:
+        if concept not in self._cache:
+            text = concept.replace("_", " ")
+            instruct = self._instruct_text(text, task="clustering")
+            self._cache[concept] = self.model.encode(instruct, normalize_embeddings=True)
+        return self._cache[concept]
+
+    def embed_concepts(self, concepts: list[str]) -> np.ndarray:
+        """Batch encode for efficiency — much faster than one-by-one."""
+        uncached = [c for c in concepts if c not in self._cache]
+        if uncached:
+            texts = [self._instruct_text(c.replace("_", " "), task="clustering")
+                     for c in uncached]
+            vecs = self.model.encode(texts, normalize_embeddings=True,
+                                      batch_size=8, show_progress_bar=True)
+            for c, v in zip(uncached, vecs):
+                self._cache[c] = v
+        return np.array([self._cache[c] for c in concepts])
+
+    def embed_in_context(self, concept: str, context: str) -> np.ndarray:
+        key = f"{concept}__{context}"
+        if key not in self._cache:
+            text = f"{concept.replace('_', ' ')} in the context of {context}"
+            instruct = self._instruct_text(text, task="clustering")
+            self._cache[key] = self.model.encode(instruct, normalize_embeddings=True)
+        return self._cache[key]
+
+    def probe_relation(self, subject: str, predicate: str, obj: str) -> float:
+        subj_vec = self.embed_concept(subject)
+        obj_vec = self.embed_concept(obj)
+        pred_text = self._instruct_text(predicate.replace("_", " "), task="relation")
+        pred_key = f"_pred_{predicate}"
+        if pred_key not in self._cache:
+            self._cache[pred_key] = self.model.encode(pred_text, normalize_embeddings=True)
+        pred_vec = self._cache[pred_key]
         predicted = subj_vec + pred_vec
         predicted = predicted / np.linalg.norm(predicted)
         return float(np.dot(predicted, obj_vec))
@@ -596,9 +703,9 @@ def export_domains_json(domains: list[DiscoveredDomain],
 
 def main():
     parser = argparse.ArgumentParser(description="Extract domains from model")
-    parser.add_argument("--mode", choices=["sentence", "ollama", "transformer"],
+    parser.add_argument("--mode", choices=["sentence", "e5", "ollama", "transformer"],
                         default="sentence",
-                        help="Which model to probe")
+                        help="Which model to probe (e5 = e5-mistral-7b-instruct, 4096-dim)")
     parser.add_argument("--ollama-model", default="llama3.2:3b")
     parser.add_argument("--transformer-model", default="TinyLlama/TinyLlama-1.1B-Chat-v1.0")
     parser.add_argument("--n-domains", type=int, default=None,
@@ -620,7 +727,9 @@ def main():
     print("=" * 60)
 
     # Select prober
-    if args.mode == "ollama":
+    if args.mode == "e5":
+        prober = E5MistralProber()
+    elif args.mode == "ollama":
         prober = OllamaProber(args.ollama_model)
     elif args.mode == "transformer":
         prober = TransformerProber(args.transformer_model)

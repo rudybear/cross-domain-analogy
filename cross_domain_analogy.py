@@ -160,11 +160,18 @@ class EmbeddingEngine:
     """Wraps sentence-transformers for encoding entities and relations."""
 
     def __init__(self, model_name: str = "all-MiniLM-L6-v2"):
+        import torch
         from sentence_transformers import SentenceTransformer
         print(f"Loading embedding model: {model_name} ...")
-        self.model = SentenceTransformer(model_name)
+        is_large = "mistral" in model_name.lower() or "7b" in model_name.lower()
+        if is_large:
+            self.model = SentenceTransformer(model_name,
+                                              model_kwargs={"torch_dtype": torch.float16})
+        else:
+            self.model = SentenceTransformer(model_name)
         self._cache: dict[str, np.ndarray] = {}
-        print("  Model loaded (runs on CPU, ~80MB).\n")
+        dim = self.model.get_sentence_embedding_dimension()
+        print(f"  Model loaded. Embedding dim: {dim}\n")
 
     def embed(self, text: str) -> np.ndarray:
         if text not in self._cache:
@@ -254,6 +261,8 @@ def compare_domain_predicates(sig_a: DomainSignature, sig_b: DomainSignature) ->
         vec_a = sig_a.predicate_vectors[pred]
         vec_b = sig_b.predicate_vectors[pred]
         sim = 1 - cosine(vec_a, vec_b)
+        if np.isnan(sim):
+            sim = 0.0
         results.append({
             "predicate": pred,
             "similarity": sim,
@@ -282,6 +291,8 @@ def compute_relation_alignment(sig_a: DomainSignature, sig_b: DomainSignature) -
         best_match = None
         for er_b in sig_b.embedded_relations:
             sim = 1 - cosine(er_a["relation_vec"], er_b["relation_vec"])
+            if np.isnan(sim):
+                sim = 0.0
             if sim > best_sim:
                 best_sim = sim
                 best_match = er_b
@@ -547,7 +558,9 @@ def load_custom_domains(path: str) -> list[Domain]:
 def main():
     parser = argparse.ArgumentParser(description="Cross-Domain Analogy Discovery")
     parser.add_argument("--ollama", action="store_true", help="Use local LLM for analysis")
-    parser.add_argument("--ollama-model", default="llama3.2:3b", help="Ollama model name")
+    parser.add_argument("--ollama-model", default="qwen2.5:14b", help="Ollama model name")
+    parser.add_argument("--embedding-model", default="all-MiniLM-L6-v2",
+                        help="Sentence-transformer model (e.g. intfloat/e5-mistral-7b-instruct)")
     parser.add_argument("--custom", type=str, help="Path to custom domains JSON file")
     parser.add_argument("--gap-threshold", type=float, default=0.3,
                         help="Similarity threshold below which a relation is a 'gap'")
@@ -571,7 +584,7 @@ def main():
 
     # Initialize embedding engine
     print()
-    engine = EmbeddingEngine()
+    engine = EmbeddingEngine(model_name=args.embedding_model)
 
     # Build domain signatures
     print("Building domain signatures...")

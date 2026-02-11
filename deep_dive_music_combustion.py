@@ -338,11 +338,11 @@ Be specific. Max 300 words."""
         print(f"\n  --- {p['title']} ---")
         try:
             resp = requests.post(url, json={
-                "model": "llama3.2:3b",
+                "model": "qwen2.5:14b",
                 "prompt": p["prompt"],
                 "stream": False,
                 "options": {"temperature": 0.3, "num_predict": 600}
-            }, timeout=120)
+            }, timeout=300)
             if resp.status_code == 200:
                 analysis = resp.json().get("response", "")
                 for line in analysis.split("\n"):
